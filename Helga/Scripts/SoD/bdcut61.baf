@@ -1,0 +1,10 @@
+/*bdcut61.baf */
+IF
+	InParty("x3Helga")  
+THEN
+	RESPONSE #100
+		CutSceneId("x3Helga")
+		ActionOverride("x3Helga",LeaveParty())
+		SetGlobal("x3HelgaKickedOut","GLOBAL",1) //this is for inner mod detection, for example if the game's a continuous EET game. Put here whatever you need for your own mod.
+		ActionOverride("x3Helga",DestroyAllFragileEquipment(ADAMANTINE)) //this destroys all drow equipment, just in case the NPC had any.
+END

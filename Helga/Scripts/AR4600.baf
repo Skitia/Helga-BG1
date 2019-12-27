@@ -1,0 +1,9 @@
+IF 
+Global("X3HOgreLeaderSpawn","GLOBAL",0)
+Global("X3HogreDead","GLOBAL",1)
+THEN RESPONSE #100 
+CreateCreature("X3HOGREL",[500.2031],SE)
+CreateCreature("X3HOGRE2",[327.2045],SE)
+CreateCreature("X3HOGREC",[646.1954],SE)
+SetGlobal("X3HOgreLeaderSpawn","GLOBAL",1)
+END 

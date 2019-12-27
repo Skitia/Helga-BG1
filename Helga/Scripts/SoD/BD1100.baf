@@ -1,0 +1,37 @@
+IF 
+Global("X32HelgaSoDSpawn","GLOBAL",0)
+BeenInParty("X3Helga")
+THEN RESPONSE #100 
+SetGlobal("X32HelgaSoDSpawn","GLOBAL",1)
+Wait(1)
+	MoveGlobal("BD1100","X3Helga",[955.1772])
+	SmallWait(1) // This line prevents the game from crashing, interestingly enough.
+    ApplySpellRES("bdresurr","X3Helga")
+    SmallWait(1)
+    ChangeEnemyAlly("X3Helga",NEUTRAL)
+    ChangeSpecifics("X3Helga",ALLIES)
+    ActionOverride("X3Helga",SetGlobal("X3HelgaJoined","locals",0))
+    ActionOverride("X3Helga",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("X3Helga",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("X3Helga",ChangeAIScript("X32Helga",OVERRIDE))
+    ActionOverride("X3Helga",ChangeAIScript("BDDCLER",CLASS))
+    ActionOverride("X3Helga",ChangeAIScript("BDSHOUT",RACE))
+    ActionOverride("X3Helga",ChangeAIScript("BDFCLE01",GENERAL))
+    ActionOverride("X3Helga",ChangeAIScript("",DEFAULT))
+    ActionOverride("X3Helga",SetDialog("X32Helga"))
+	ActionOverride("X3Helga",SetPlayerSound(Myself,@100002,EXISTANCE5))
+	Continue()
+END 
+	
+IF 
+Global("X32HelgaSoDSpawn","GLOBAL",0)
+!BeenInParty("X3Helga") // Was not in the party
+THEN RESPONSE #100 
+SetGlobal("X32HelgaSoDSpawn","GLOBAL",1)
+	CreateCreature("X32Helga",[955.1772],SE)
+	ActionOverride("X3Helga",ChangeAIScript("BDSHOUT",RACE))
+	ActionOverride("X3Helga",ChangeAIScript("BDDCLER",CLASS))
+	ActionOverride("X3Helga",ChangeAIScript("BDFCLE01",GENERAL))
+	ActionOverride("X3Helga",MakeGlobal())
+	Continue()
+END 	

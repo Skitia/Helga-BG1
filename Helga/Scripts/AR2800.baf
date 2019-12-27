@@ -1,0 +1,9 @@
+IF 
+Global("X3HelgaSpawn","GLOBAL",0)
+THEN RESPONSE #100 
+CreateCreature("X3Hogre",[2013.1799],SE)
+CreateCreature("X3Helga",[2013.1799],SE)
+Kill("X3Hogre")
+SetGlobal("X3HelgaSpawn","GLOBAL",1)
+Continue()
+END 

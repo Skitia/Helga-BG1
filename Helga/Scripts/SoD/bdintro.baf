@@ -1,0 +1,11 @@
+IF
+	Global("SOD_fromimport","global",1)
+	InMyArea("X3Helga")
+THEN
+	RESPONSE #100
+		ActionOverride("X3Helga",ChangeAIScript("X32Helga",OVERRIDE))
+		CutSceneId(Player1)
+		ActionOverride("X3Helga",SetDialogue("X32HelgJ"))
+		ActionOverride("X3Helga",ChangeAIScript("X32Helga",OVERRIDE))
+		
+END

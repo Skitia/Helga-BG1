@@ -1,0 +1,25 @@
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_X3helga_ot","bd4100",0)
+  ReputationLT(Player1,10)
+  InParty("X3Helga")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_X3helga_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",ONE_ROUND)
+    DisplayStringHead("X3Helga",~Well bah! Seems <CHARNAME>'s killed the brat.~)
+END
+
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_X3helga_ot","bd4100",0)
+  !ReputationLT(Player1,10)
+  InParty("X3Helga")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_X3helga_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)
+    DisplayStringHead("X3Helga",~There be no bloody way <CHARNAME> be involved.~)
+END

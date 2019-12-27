@@ -1,0 +1,13 @@
+/* bdcut58.baf */
+
+
+IF
+  Global("bd_X3Helga_kicked_mdd1330","global",1)
+  !Dead("X3Helga")
+  !InParty("X3Helga")
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveGlobal("bd4400","X3Helga",[893.1165]) 
+    ActionOverride("X3Helga",Face(NE))    
+END

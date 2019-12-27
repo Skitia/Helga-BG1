@@ -1,0 +1,97 @@
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_CURE_LIGHT_WOUNDS))  // SPPR103.SPL (Cure Light Wounds)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_CURE_LIGHT_WOUNDS)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS))  // SPPR315.SPL (Cure Medium Wounds)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_CURE_MEDIUM_WOUNDS)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS))  // SPPR401.SPL (Cure Serious Wounds)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_CURE_SERIOUS_WOUNDS)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS))  // SPPR502.SPL (Cure Critical Wounds)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_CURE_CRITICAL_WOUNDS)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_HEAL))  // SPPR607.SPL (Heal)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_HEAL)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_NEUTRALIZE_POISON))  // SPPR404.SPL (Neutralize Poison)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_NEUTRALIZE_POISON)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_AID))  // SPPR201.SPL (Aid)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_AID)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+
+IF
+	Global("BD_WOUNDED_ZEALOT_X3Helga","GLOBAL",1)
+	TriggerOverride("X3Helga",HaveSpell(CLERIC_MASS_CURE))  // SPPR514.SPL (Mass Cure)
+THEN
+	RESPONSE #100
+		CutSceneId("X3Helga")  // X3Helga
+		Spell("bdhyreth",CLERIC_MASS_CURE)  // Hyreth
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("bdhyreth",StartDialogueNoSet(LastTalkedToBy))
+END
+

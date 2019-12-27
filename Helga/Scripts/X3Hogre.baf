@@ -1,0 +1,29 @@
+// Old Script that fired a cutscene for Helga's entrance. We are removing. 
+
+/*IF
+    Range([PC],30)
+	Global("Cutscene","LOCALS",0)
+THEN
+    RESPONSE #100
+CreateCreature("X3Helga",[2300.1100],W)	
+SetGlobal("Cutscene","LOCALS",1)
+CreateCreatureObjectOffset("cutspy",Myself,[10.10])
+ClearAllActions()
+StartCutsceneMode()
+MoveViewObject(Myself,INSTANT)
+ActionOverride("X3Helga",MoveToPoint([2700.1370]))
+Wait(2)
+DisplayStringHead("X3Hogre",~Me smash house! Me smash you!~)
+Wait(3)
+DisplayStringHead("X3Helga",~Finally, ye bastard. Found ye.~)
+Wait(3)
+ActionOverride("X3Helga",ForceSpellRES("X3HBOLT","X3Helga"))
+Wait(3)
+DisplayStringHead("X3Hogre",~Rawr!~)
+Enemy()
+ActionOverride("X3Helga",Attack("X3Hogre"))
+EndCutSceneMode()
+Attack(Player1) 
+ActionOverride("X3Helga",Attack("X3Hogre"))
+ActionOverride("CutSpy",DestroySelf())
+END*/

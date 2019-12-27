@@ -1,0 +1,15 @@
+IF
+  Global("bd_plot","global",170)
+  Global("bd_mdd016b_X3Helga","bd1000",0)
+  !GlobalTimerNotExpired("bd_mdd016b_timer","bd1000")
+  IfValidForPartyDialog("X3Helga")
+  NextTriggerObject("X3Helga")
+  Detect(Player1)
+THEN
+  RESPONSE #50
+    SetGlobal("bd_mdd016b_X3Helga","bd1000",1)
+  RESPONSE #50
+    SetGlobal("bd_mdd016b_X3Helga","bd1000",1)
+    SetGlobalTimer("bd_mdd016b_timer","bd1000",ONE_ROUND)
+    DisplayStringHead("X3Helga",~Cowardly crusaders. I wanted a battle with her here and now!~)
+END

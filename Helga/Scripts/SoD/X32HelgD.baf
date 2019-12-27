@@ -1,0 +1,32 @@
+// Talk1
+IF
+InParty(Myself)
+Global("X32HelgaTalk","GLOBAL",1)
+GlobalTimerExpired("X32HelgaGameTalkTimer","GLOBAL")
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!AreaType(DUNGEON)
+THEN
+RESPONSE #100
+IncrementGlobal("X32HelgaTalk","GLOBAL",1)
+PlaySong(0)
+PlaySound("X3HSonD")
+StartDialogueNoSet(Player1)
+END
+
+// Talk 4
+IF
+InParty(Myself)
+Global("X32HelgaTalk","GLOBAL",7)
+GlobalTimerExpired("X32HelgaGameTalkTimer","GLOBAL")
+RealGlobalTimerExpired("X32HelgaRealTalkTimer","GLOBAL")
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!AreaType(DUNGEON)
+THEN
+RESPONSE #100
+IncrementGlobal("X32HelgaTalk","GLOBAL",1)
+PlaySong(0)
+PlaySound("X3HSonL")
+StartDialogueNoSet(Player1)
+END

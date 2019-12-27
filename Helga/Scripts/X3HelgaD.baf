@@ -1,0 +1,15 @@
+// Talk1
+IF
+InParty(Myself)
+Global("X3HelgaTalk","GLOBAL",1)
+RealGlobalTimerExpired("X3HelgaTalkTimer","GLOBAL")
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!AreaType(DUNGEON)
+THEN
+RESPONSE #100
+IncrementGlobal("X3HelgaTalk","GLOBAL",1)
+PlaySong(0)
+PlaySound("X3HSonD")
+StartDialogueNoSet(Player1)
+END

@@ -1,0 +1,95 @@
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////Siege of Dragonspear////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+//CREATURES
+
+COPY ~Helga/cre/X32Helga.cre~ ~override/X32Helga.cre~
+  SAY NAME1 ~Helga~
+  SAY NAME2 ~Helga~
+  WRITE_ASCII 0x248 ~X32Helga~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Helga~ #32  //DV
+  WRITE_ASCII 0x2cc ~X32Helga~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~HelgaM~ #8   //small portrait, we do not have one right now, comment out.
+  WRITE_ASCII 0x3c ~HelgaL~ #8   //medium portrait, we do not have one right now, comment out. 
+  SAY BIO ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equally number of battles, she seeks that final glorious battle that will define her legacy, and be her fall.~
+  SAY MORALE ~We must get out of here!~ [X3HeFear] //
+  SAY HAPPY ~I knew this would go well!~ [X3HeHap] //
+  SAY UNHAPPY_ANNOYED ~This better be a minor setback.~
+  SAY UNHAPPY_SERIOUS ~My patience is running thin with yer constant evil. Do you want to be enemies?~
+  SAY UNHAPPY_BREAKING_POINT ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+  SAY LEADER ~Follow me closely, now.~ [X3HeLead]  //
+  SAY TIRED ~I believe we should rest soon.~ [X3HeRest]  //
+  SAY BORED ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore] //
+  SAY BATTLE_CRY1 ~For honor and glory!~ [X3HeCry1] //
+  SAY BATTLE_CRY2 ~~ [X3HeCry2] // 
+  SAY BATTLE_CRY3 ~By the blood of the all father!~ [X3HeCry3] //
+  SAY BATTLE_CRY4 ~Fall before me!~ [X3HeCry4] //
+  SAY BATTLE_CRY5 ~Give me a hand, here!~ [X3HeCry5] //
+  SAY DAMAGE ~~ [X3HeDam] //
+  SAY DYING ~~ [X3HeDead] //
+  SAY HURT ~If  yer going to do something, do it fast!~ [X3HeHeal] //
+  SAY AREA_FOREST ~Take a look over here, this is interesting.~ [X3HeFor] 
+  SAY AREA_CITY ~What bloody battles are we going to find in a city?~
+  SAY AREA_DUNGEON ~Keep yer eyes open. See if there's anything to spot.~ [X3HeDun]
+  SAY AREA_DAY ~The sun will shine its light on the blood of our enemies.~
+  SAY AREA_NIGHT ~Keep it down. We need to get through here quietly.~ [X3HeNig]
+  SAY SELECT_COMMON1 ~What now?~ [X3HeCom1] //
+  SAY SELECT_COMMON2 ~Yes? What do ye need?.~ [X3HeCom2] //
+  SAY SELECT_COMMON3 ~Well met.~ [X3HeCom3]
+  SAY SELECT_COMMON4 ~What now?~  [X3HeCom1] //
+  SAY SELECT_COMMON5 ~Yes? What do ye need?~ [X3HeCom2]
+  SAY SELECT_COMMON6 ~Well met.~ [X3HeCom3]
+  SAY SELECT_ACTION1 ~Indeed.~ [X3HeAct1]
+  SAY SELECT_ACTION2 ~Mmm. That may work.~ [X3HeAct2]
+  SAY SELECT_ACTION3 ~Allow me.~ [X3HeAct3]
+  SAY SELECT_ACTION4 ~Let me see.~ [X3HeAct4]
+  SAY SELECT_ACTION5 ~Yes, of course.~ [X3HeAct5]
+  SAY SELECT_ACTION6 ~I appreciate that.~ [X3HeAct6]
+  SAY SELECT_ACTION7 ~Hmm.~ [X3HeAct7]
+  SAY CRITICAL_HIT ~~[X3HeCrit] //
+  SAY CRITICAL_MISS ~By Clangeddin's Beard.~ [X3HeCrtM] //
+  SAY TARGET_IMMUNE ~My weapon cannot hurt this one.~ [X3HeInff] // 
+  SAY INVENTORY_FULL ~I can't carry that. We'll have to leave something behind.~ [X3HeEnc] //
+  SAY SPELL_DISRUPTED ~What? Now my magic is failing?~ [X3HeSpel] // 
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3cleric~))  
+  
+APPEND ~bddialog.2da~ ~X3Helga X32Helga X32HelgJ X32HelgD~ 
+  UNLESS ~X3Helga~
+
+
+////////////////DIALOGUES
+
+COMPILE EVALUATE_BUFFER ~Helga/dialogue/SoD/X32Helga.d~
+COMPILE EVALUATE_BUFFER ~Helga/dialogue/SoD/X32HelgJ.d~
+
+
+
+// Non-Area Scripts 
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32Helga.baf~
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32HelgD.baf~
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32HBant.baf~
+  EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdcut58.baf~
+  EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdcut59b.baf~
+  EXTEND_TOP ~bdcut61.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdcut61.baf~  
+  EXTEND_BOTTOM ~bdsdd304.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdsdd304.baf~
+  EXTEND_TOP ~bdintro.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdintro.baf~
+  EXTEND_TOP ~bdparty.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdparty.baf~
+////////////////Area SCRIPTS
+  EXTEND_TOP ~bd0063.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0063.baf~
+  EXTEND_TOP ~bd0120.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0103.baf~
+  EXTEND_TOP ~bd0120.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0120.baf~
+  EXTEND_TOP ~bd1000.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd1000.baf~  
+  EXTEND_TOP ~bd1100.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd1100.baf~
+  EXTEND_TOP ~bd2000.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd2000.baf~ 
+  EXTEND_TOP ~bd3000.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd3000.baf~ 
+  EXTEND_TOP ~bd4100.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd4100.baf~  
+  EXTEND_TOP ~bd4300.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd4300.baf~ 
+  EXTEND_TOP ~bd5300.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd5300.baf~ 
+  EXTEND_TOP ~bd7100.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd7100.baf~ 
+

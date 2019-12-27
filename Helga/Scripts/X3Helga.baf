@@ -1,0 +1,219 @@
+// Pause Timer to give time for music to finish between NPCs .
+IF 
+Global("X3PauseTimer","GLOBAL",0)
+InParty(Myself)
+THEN RESPONSE #100 
+SetGlobal("X3PauseTimer","GLOBAL",1)
+RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
+END 
+
+// EXPERIENCE
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,31999)
+  XPLT(Myself,32000)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,32000,SET)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,15999)
+  XPLT(Myself,16000)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,16000,SET)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,7999)
+  XPLT(Myself,8000)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,8000,SET)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,3999)
+  XPLT(Myself,4000)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,4000,SET)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,1999)
+  XPLT(Myself,2000)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,2000,SET)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPLT(Player1,2000)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_JOINXP","LOCALS",1)
+	ChangeStat(Myself,XP,1000,SET)
+END
+
+//Does Helga's quest after recruiting. 
+IF 
+InParty("X3Helga")
+!Dead("X3HogreL")
+Global("X3HelgaTimerInitiate","GLOBAL",0)
+THEN RESPONSE #100 
+SmallWait(1)
+IncrementGlobal("X3HelgaTimerInitiate","GLOBAL",1)
+RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",15)
+SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS)
+SmallWait(1)
+SetGlobal("X3HelgaQuestExpire","GLOBAL",1)
+IncrementGlobal("X3HelgaTalk","GLOBAL",1)
+END 
+//Does Helga's quest before recruiting. 
+IF 
+InParty("X3Helga")
+Dead("X3HogreL")
+Global("X3HelgaTimerInitiate","GLOBAL",0)
+THEN RESPONSE #100 
+IncrementGlobal("X3HelgaTimerInitiate","GLOBAL",1)
+RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",15)
+IncrementGlobal("X3HelgaTalk","GLOBAL",1)
+END 
+//The Ogre Has Died!
+IF 
+Dead("X3HogreL")
+Global("X3HelgaQuest","GLOBAL",0)
+CombatCounter(0)
+InParty("X3Helga")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3HelgaQuest","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END 
+// Quest Timers, these are Ten Days each, for a total of a 30 day time limit.
+//Increment Block
+IF 
+InParty(Myself)
+GlobalTimerExpired("X3HelgaQuestTen","GLOBAL")
+!Dead("X3HogreL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(3)
+Global("X3HelgaQuestExpire","GLOBAL",1)
+Global("X3HelgaQuestExpire","GLOBAL",3)
+Global("X3HelgaQuestExpire","GLOBAL",5)
+THEN RESPONSE #100
+IncrementGlobal("X3HelgaQuestExpire","GLOBAL",1)
+END 
+// Dialogue Block
+IF 
+InParty(Myself)
+GlobalTimerExpired("X3HelgaQuestTen","GLOBAL")
+!Dead("X3HogreL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(3)
+Global("X3HelgaQuestExpire","GLOBAL",2)
+Global("X3HelgaQuestExpire","GLOBAL",4)
+Global("X3HelgaQuestExpire","GLOBAL",6)
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+
+//Talk Block 
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3HelgaTalkTimer","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)    
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)                          
+!See([ENEMY])
+!AreaType(DUNGEON)			  
+OR(5)                       // YOU WILL NEED TO ADD +1 TO THIS OR NUMBER FOR EVERY ADDITONAL TALK YOU ADD          
+Global("X3HelgaTalk","GLOBAL",3)
+Global("X3HelgaTalk","GLOBAL",5)
+Global("X3HelgaTalk","GLOBAL",7)
+Global("X3HelgaTalk","GLOBAL",9)
+Global("X3HelgaTalk","GLOBAL",11)
+THEN
+RESPONSE #100
+IncrementGlobal("X3HelgaTalk","GLOBAL",1)
+END
+
+
+IF
+RealGlobalTimerExpired("X3PauseTalkTimer","GLOBAL")
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+!AreaType(DUNGEON)
+OR(5)                                    // YOU WILL NEED TO ADD +1 TO THIS OR NUMBER FOR EVERY ADDITONAL TALK YOU ADD  
+Global("X3HelgaTalk","GLOBAL",4)
+Global("X3HelgaTalk","GLOBAL",6)
+Global("X3HelgaTalk","GLOBAL",8)
+Global("X3HelgaTalk","GLOBAL",10)
+Global("X3HelgaTalk","GLOBAL",12)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
+PlaySong(0)
+PlaySound("X3HSonD") 
+StartDialogueNoSet(Player1)
+END
+// Durlag Talk 
+IF
+	InParty(Myself)
+	AreaCheck("AR0511")	
+	Global("X3HelgaDurlag","GLOBAL",0)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3HelgaDurlag","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END
+
+// SEX CHANGE
+
+IF
+    InParty(Myself)
+	Gender(Myself,MALE)
+	HasItemEquiped("belt05",Myself)
+    Global("X3HelgaSexChange","GLOBAL",0)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3HelgaSexChange","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END

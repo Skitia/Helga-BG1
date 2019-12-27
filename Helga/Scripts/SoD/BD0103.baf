@@ -1,0 +1,15 @@
+IF
+  OR(2)
+    InMyArea("X3Helga")
+    InPartyAllowDead("X3Helga")
+  GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+  RESPONSE #100
+    ActionOverride("X3Helga",LeaveParty())
+	ActionOverride("PlayerChest00",TakeCreatureItems("X3Helga",BACKPACK))
+    SmallWait(1)
+    ActionOverride("X3Helga",DestroySelf())
+    Continue()
+END
+
+

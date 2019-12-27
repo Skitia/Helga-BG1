@@ -1,0 +1,11 @@
+IF
+	See([PC])
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SmallWait(5)
+		Enemy()
+		ActionOverride("X3HogreL",Enemy())
+		ActionOverride("X3Hogre2",Enemy())
+END

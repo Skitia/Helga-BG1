@@ -1,0 +1,37 @@
+/* x3bd7100.baf
+Moves Helga into the Coalition Camp if she was not in party */
+
+IF
+    InParty("X3Helga")
+	Global("X3Helga_MoveCamp","BD7100",0)
+THEN
+  RESPONSE #100
+    SetGlobal("X3Helga_MoveCamp","BD7100",1)
+END
+
+
+IF
+  Global("X3Helga_MoveCamp","bd7100",0)
+  Global("X32HelgaSoDIntro","GLOBAL",2)
+  Global("BD_DOD_QUEST_DONE","GLOBAL",1)
+  !Dead("X3Helga")
+  !InPartyAllowDead("X3Helga")
+THEN
+  RESPONSE #100
+    SetGlobal("X3Helga_MoveCamp","bd7100",1)
+    MoveGlobal("bd7100","X3Helga",[890.3630]) 
+    ActionOverride("X3Helga",Face(NW))
+    ReallyForceSpellDeadRES("bdrejuve","X3Helga")
+    ChangeEnemyAlly("X3Helga",NEUTRAL)
+    ChangeSpecifics("X3Helga",ALLIES)
+    ActionOverride("X3Helga",SetGlobal("bd_joined","locals",0))
+    ActionOverride("X3Helga",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("X3Helga",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("X3Helga",ChangeAIScript("X32Helga",OVERRIDE))
+    ActionOverride("X3Helga",ChangeAIScript("bdasc3",CLASS))
+    ActionOverride("X3Helga",ChangeAIScript("BDSHOUT",RACE))
+    ActionOverride("X3Helga",ChangeAIScript("BDRANG01",GENERAL))
+    ActionOverride("X3Helga",ChangeAIScript("",DEFAULT))
+    ActionOverride("X3Helga",SetDialogue("X32Helga"))
+    Continue()
+END

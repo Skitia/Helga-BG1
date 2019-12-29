@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
-AUTHOR ~Skitia~
-VERSION ~1.41~
+AUTHOR ~Skitia: https://skitias-stories.com/contact~
+VERSION ~1.42~
 
 AUTO_TRA ~Helga/tra/%s~ //~%~
 LANGUAGE 

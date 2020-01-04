@@ -1,5 +1,5 @@
 BACKUP ~Helga\backup~
-AUTHOR ~Skitia: https://skitias-stories.com/contact~
+AUTHOR ~Skitia~
 VERSION ~1.42~
 
 AUTO_TRA ~Helga/tra/%s~ //~%~
@@ -285,6 +285,8 @@ OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
   ACTION_READLN ~music~
 END
       ACTION_IF ("music" = 1) THEN BEGIN
+	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+
 	MKDIR ~music/blank~
 	COPY ~Helga/Music/blank.mus~ ~music~
 		~Helga/Music/blank.acm~ ~music/blank/blanka.acm~

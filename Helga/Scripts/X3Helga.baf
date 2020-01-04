@@ -132,6 +132,7 @@ IncrementGlobal("X3HelgaQuestExpire","GLOBAL",1)
 END 
 // Dialogue Block
 IF 
+!AreaCheck("AR4600")
 InParty(Myself)
 GlobalTimerExpired("X3HelgaQuestTen","GLOBAL")
 !Dead("X3HogreL")

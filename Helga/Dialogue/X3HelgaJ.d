@@ -929,3 +929,9 @@ END
 I_C_T KIVAN 7 X3HelgaKIVAN7
 == X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN ~A fellow ogre hunter, though yer reasons be more personal. Makes the hunting sweeter.~
 END
+
+INTERJECT OGRECO 0 X3HelgaOGRECO0 
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN ~We nay waiting for ye to finish, beast! Grab yer arms and face yer death!~
+== OGRECO ~Me eat dessert early, pound you to pudding. Mmm, pudding.~
+DO ~Enemy()~
+EXIT 

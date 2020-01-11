@@ -132,7 +132,7 @@ IncrementGlobal("X3HelgaQuestExpire","GLOBAL",1)
 END 
 // Dialogue Block
 IF 
-!AreaCheck("AR4600")
+!AreaCheck("%bg1_eet_symbol%4600")
 InParty(Myself)
 GlobalTimerExpired("X3HelgaQuestTen","GLOBAL")
 !Dead("X3HogreL")
@@ -196,7 +196,7 @@ END
 // Durlag Talk 
 IF
 	InParty(Myself)
-	AreaCheck("AR0511")	
+	AreaCheck("%bg1_eet_symbol%0511")	
 	Global("X3HelgaDurlag","GLOBAL",0)
 THEN
   RESPONSE #100

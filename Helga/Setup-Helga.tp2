@@ -1,17 +1,28 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.42~
+VERSION ~1.43~
 
-AUTO_TRA ~Helga/tra/%s~ //~%~
+ALWAYS
+  INCLUDE ~Vienxay/library/eet.tph~
+  INCLUDE ~Vienxay/library/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
+END
+
+AUTO_TRA ~Helga/Tra/%s~ 
 LANGUAGE 
   ~English~ 
   ~english~
-  ~%MOD_FOLDER%/tra/english/setup-Helga.tra~
+  ~%MOD_FOLDER%/Tra/English/Setup-Helga.tra~
 
 BEGIN ~Helga NPC Mod~ 
-INCLUDE "Helga/lib/fl#add_kit_ee.tpa"
 
+ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_symbol" AR
+END
 
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_symbol" BG
+END
 
 ADD_KIT ~X3cleric~
 	~X3cleric 1 1 1 1 1 1 1 1~
@@ -68,7 +79,7 @@ LAF fl#add_kit_ee
 		kit_name = ~X3cleric~
 //		backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
 		clswpbon = ~1 0 3~
-		numwslot = ~3~
+		numwslot = ~2~
 //		thiefskl = ~0 0~
 //		traplimt = 0
 //		clascolr = ~38 70 70 28 83~
@@ -89,13 +100,14 @@ COPY	"Helga/Kit/X3HurlS.spl" override
 	SAY NAME1 ~Hurl Stone~
 	SAY NAME2 ~Hurl Stone~
 	SAY 0x50 ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 2d6 direct magic damage with no save, although it does not bypass magic resistance.~ 
+COPY	"%MOD_FOLDER%/Kit/x3HSW.bam" override
 COPY	"Helga/Kit/x3HBlade.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
 SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
-Damage: 1d10+1, +1 Fire Damage
+Damage: 1d10, +1 Fire Damage
 THAC0: +1
 Speed Factor: 9
 Proficiency Type: Greatsword
@@ -107,8 +119,44 @@ SAY NAME2 ~Flamebolt~
 SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
-Damage: 1d10+2, +2 Fire Damage
+Damage: 1d10, +2 Fire Damage
 THAC0: +2
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"Helga/Kit/x3HBlad3.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
+Damage: 1d10, +3 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"Helga/Kit/x3HBlad4.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
+Damage: 1d10, +4 Fire Damage
+THAC0: +4
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"Helga/Kit/x3HBlad5.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
+Damage: 1d10, +5 Fire Damage
+THAC0: +5
 Speed Factor: 9
 Proficiency Type: Greatsword
 Type: Two-handed~
@@ -204,13 +252,12 @@ COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HelgaJ.d~
 COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HelgaB.d~
 COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HogreL.d~ 
 
-      EXTEND_TOP ~ar2800.bcs~ ~Helga/Scripts/ar2800.baf~
+      EXTEND_TOP ~ar2800.bcs~ ~Helga/Scripts/%bg1_eet_symbol%2800.baf~
         EVALUATE_BUFFER   
-      EXTEND_TOP ~ar4600.bcs~ ~Helga/Scripts/ar4600.baf~
+      EXTEND_TOP ~ar4600.bcs~ ~Helga/Scripts/%bg1_eet_symbol%4600.baf~
         EVALUATE_BUFFER   
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Helga.baf~		
 COMPILE ~Helga/Scripts/X3HelgaD.baf~	
-COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Hogre.baf~
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreL.baf~	
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Hogre2.baf~
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreC.baf~	

@@ -23,7 +23,7 @@ END
 
 IF ~~ X3H.Quest2ELeave 
 SAY ~I be returning home to find another group. Ye somehow bloody manage to do it on yer own, come find me in my home in Beregost. Until then, I be leaving this sloth party.~
-IF ~~ DO ~SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("AR3302",252,249,SW)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 
@@ -32,7 +32,7 @@ END
 
 IF ~Global("X3HelgaQuestExpire","GLOBAL",6)!Dead("X3HogreL")~ X3H.Quest1E 
 SAY ~Bah. I be tired of all the waiting. I be returning home to find another group. Ye somehow bloody manage to do it on yer own, come find me in my home in Beregost, until then, I'm bloody leaving this sloth party.~
-IF ~~ DO ~SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("AR3302",252,249,SW)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 // Quest Done 
@@ -53,7 +53,7 @@ END
 
 IF ~~ X3H.QuestDoneB 
 SAY ~Bah. Yer loss. Ye change yer mind, I be in my home in Beregost.~
-IF ~~ DO ~AddJournalEntry(@4,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)LeaveParty()EscapeAreaMove("AR3302",252,249,SW)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@4,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)LeaveParty()EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 //Talk 1 

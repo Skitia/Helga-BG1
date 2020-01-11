@@ -11,7 +11,7 @@ END
 
 IF ~~ kicked1A 
 SAY ~Bah. I'll be at my home in Beregost, next to Thunderhammer if ye change yer tune.~
-IF ~~ DO ~SetGlobal("X3HelgaKickedOut","GLOBAL",1)EscapeAreaMove("AR3302",252,249,SW)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelgaKickedOut","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 // Helga left because the were taking too long. 

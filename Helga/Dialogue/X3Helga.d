@@ -1,15 +1,15 @@
 BEGIN X3Helga
 
 CHAIN IF ~Global("X3HelgaSpawn","GLOBAL",1)~ THEN X3Helga b1NotDead 
-~Heh, that all ye bloody fools got? Not half as tough as the ogres in the north.~
+~Heh, that all ye got? Not half as tough as the ogres in the north.~
 DO ~SetGlobal("X3HogreDead","GLOBAL",1)~
 END 
-++ ~You killed these ogres all on your own?~ + b1.Thanks 
+++ ~You killed this ogres all on your own?~ + b1.Thanks 
 ++ ~Who are you?~ + b1.Who 
 ++ ~We're just passing through.~ + b1.Control 
 
 CHAIN X3Helga b1.Thanks 
-~Aye, been hunting these bastards...though they did a number on me themself. I nay be able to hunt their chieftain like this.~
+~Aye, been hunting this bastard for a time...though he did a number on me themself. I nay be able to hunt their chieftain on me own.~
 EXTERN X3Helga b1.Who 
 
 CHAIN X3Helga b1.Who 
@@ -50,11 +50,11 @@ DO ~AddJournalEntry(@1,QUEST)AddJournalEntry(@11,INFO)JoinParty()~ EXIT
 
 CHAIN X3Helga b1.Yes 
 ~Good luck out there. Ye need me, I'll be in my home in Beregost, next to Thunderhammer.~
-DO ~EscapeAreaMove("AR3302",252,249,SW)AddJournalEntry(@1,QUEST)~ EXIT 
+DO ~EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)AddJournalEntry(@1,QUEST)~ EXIT 
 
 CHAIN X3Helga b1.No 
 ~Bah. Thought you were one with courage. You change yer mind and kill that thing, or ye need a good stout hammer, find me in my temporary home in Beregost, next to Thunderhammer.~
-DO ~EscapeAreaMove("AR3302",252,249,SW)AddJournalEntry(@1,QUEST)~ EXIT
+DO ~EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)AddJournalEntry(@1,QUEST)~ EXIT
 
 CHAIN IF ~Global("X3HogreDead","GLOBAL",1)~ THEN X3Helga b2 
 ~Ye again. What brings ye here?~

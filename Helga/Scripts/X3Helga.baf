@@ -205,6 +205,22 @@ THEN
 	StartDialogueNoSet(Player1)
 END
 
+// Rage 
+IF 
+HPPercentLT(Myself,20)
+Global("X3HelRage","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelRage","LOCALS",1)
+ForceSpell(Myself,BERSERKER_RAGE)
+END 	
+
+IF 
+PartyRested()
+Global("X3HelRage","LOCALS",1)
+THEN RESPONSE #100 
+SetGlobal("X3HelRage","LOCALS",0)
+END 
+
 // SEX CHANGE
 
 IF

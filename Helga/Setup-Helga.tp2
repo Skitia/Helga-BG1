@@ -1,10 +1,10 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.43~
+VERSION ~1.44~
 
 ALWAYS
-  INCLUDE ~Vienxay/library/eet.tph~
-  INCLUDE ~Vienxay/library/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/library/eet.tph~
+  INCLUDE ~%MOD_FOLDER%/library/functions.tph~
   INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
 END
 

@@ -28,11 +28,11 @@ Global("X3HelgaX3Rec","GLOBAL",1)~ THEN X3HelgaB X3RecX3Helga2
 ~Ye know any dwarven melodies, Recorder?~
 DO ~SetGlobal("X3HelgaX3Rec","GLOBAL",2)~
  == X3RecB ~I don't, actually. I thought it was a bit of drums and low sounding instruments, maybe voices in your culture.~
- == X3HelgaB ~For the churches, maybe, and the festivals. What is used depends on the hall.~
+ == X3HelgaB ~For the churches, maybe, and the festivals. What is used depends on the hall. Cornets and horns, the same we used for battle, or aye, yer drums are some examples.~
  == X3RecB ~What did your dwarven home use?~
- == X3HelgaB ~The fortress was nay much a place of music or revelry. Bit of solemn times, with we few and our duty.~
- == X3RecB ~That sounds a bit sad.~
- == X3HelgaB ~Aye, it could be. But the glorious battles we did together, they were all the entertainment we needed.~
+ == X3HelgaB ~The fortress was nay much a place of music or revelry. Bit of solemn times, with we few and our duty. Nothing more than a hum in terms of music. We liked it that way.~
+ == X3RecB ~I admire the dedication of your people, but that sounds a bit sad that they are without the mirth of music.~
+ == X3HelgaB ~Aye, it may be. But the glorious battles we did together, they were all the entertainment we needed.~
 EXIT 
 
 // 3: Helga asks a bit about Gustav. 

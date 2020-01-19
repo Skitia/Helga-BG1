@@ -3,8 +3,8 @@ AUTHOR ~Skitia~
 VERSION ~1.44~
 
 ALWAYS
-  INCLUDE ~%MOD_FOLDER%/library/eet.tph~
-  INCLUDE ~%MOD_FOLDER%/library/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/eet.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
 END
 

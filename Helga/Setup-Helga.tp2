@@ -252,9 +252,9 @@ COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HelgaJ.d~
 COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HelgaB.d~
 COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HogreL.d~ 
 
-      EXTEND_TOP ~ar2800.bcs~ ~Helga/Scripts/%bg1_eet_symbol%2800.baf~
+      EXTEND_TOP ~%bg1_eet_symbol%2800.bcs~ ~Helga/Scripts/AR2800.baf~
         EVALUATE_BUFFER   
-      EXTEND_TOP ~ar4600.bcs~ ~Helga/Scripts/%bg1_eet_symbol%4600.baf~
+      EXTEND_TOP ~%bg1_eet_symbol%4600.bcs~ ~Helga/Scripts/AR4600.baf~
         EVALUATE_BUFFER   
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Helga.baf~		
 COMPILE ~Helga/Scripts/X3HelgaD.baf~	

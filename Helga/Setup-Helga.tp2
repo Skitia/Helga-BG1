@@ -63,8 +63,7 @@ HURL STONE: The priest creates a magical stone the size of their palm, which fli
 
 -May Cast Flamebolt Once Per Day. Gains one use at level one and an additional use every ten levels thereafter. 
 
-FLAME BOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The blade does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
-
+FLAME BOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The blade does 1d10 +1 fire damage, with a THACO bonus of 1. These are all improved by one every five levels, at a max of +5 at level 20. The blade acts at a speed factor of nine and lasts for five rounds.
 Disadvantages:
 -Dwarf only. 
 -May only be CN, CG, and NG.~ 

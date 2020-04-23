@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.44~
+VERSION ~1.45~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/eet.tph~
@@ -63,7 +63,8 @@ HURL STONE: The priest creates a magical stone the size of their palm, which fli
 
 -May Cast Flamebolt Once Per Day. Gains one use at level one and an additional use every ten levels thereafter. 
 
-FLAME BOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The blade does 1d10 +1 fire damage, with a THACO bonus of 1. These are all improved by one every five levels, at a max of +5 at level 20. The blade acts at a speed factor of nine and lasts for five rounds.
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for one turn. During this turn, the priest cannot cast any spells.
+
 Disadvantages:
 -Dwarf only. 
 -May only be CN, CG, and NG.~ 
@@ -103,11 +104,11 @@ COPY	"%MOD_FOLDER%/Kit/x3HSW.bam" override
 COPY	"Helga/Kit/x3HBlade.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.
+SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for one turn. During this turn, the priest cannot cast any spells.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
 Damage: 1d10, +1 Fire Damage
-THAC0: +1
+THAC0: +3
 Speed Factor: 9
 Proficiency Type: Greatsword
 Type: Two-handed~
@@ -119,7 +120,7 @@ SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame na
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
 Damage: 1d10, +2 Fire Damage
-THAC0: +2
+THAC0: +3
 Speed Factor: 9
 Proficiency Type: Greatsword
 Type: Two-handed~
@@ -143,7 +144,7 @@ SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame na
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
 Damage: 1d10, +4 Fire Damage
-THAC0: +4
+THAC0: +3
 Speed Factor: 9
 Proficiency Type: Greatsword
 Type: Two-handed~
@@ -155,7 +156,7 @@ SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame na
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
 Damage: 1d10, +5 Fire Damage
-THAC0: +5
+THAC0: +3
 Speed Factor: 9
 Proficiency Type: Greatsword
 Type: Two-handed~

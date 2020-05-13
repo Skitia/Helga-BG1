@@ -1,12 +1,3 @@
-// Pause Timer to give time for music to finish between NPCs .
-IF 
-Global("X3PauseTimer","GLOBAL",0)
-InParty(Myself)
-THEN RESPONSE #100 
-SetGlobal("X3PauseTimer","GLOBAL",1)
-RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
-END 
-
 // EXPERIENCE
 
 IF
@@ -172,7 +163,6 @@ END
 
 
 IF
-RealGlobalTimerExpired("X3PauseTalkTimer","GLOBAL")
 InParty(Myself)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID) 
@@ -188,9 +178,8 @@ Global("X3HelgaTalk","GLOBAL",10)
 Global("X3HelgaTalk","GLOBAL",12)
 THEN
 RESPONSE #100
-RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
 PlaySong(0)
-PlaySound("X3HSonD") 
+//PlaySound("X3HSonD") 
 StartDialogueNoSet(Player1)
 END
 // Durlag Talk 

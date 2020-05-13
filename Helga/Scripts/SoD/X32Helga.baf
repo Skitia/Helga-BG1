@@ -1,11 +1,3 @@
-IF 
-Global("X32PauseTimer","GLOBAL",0)
-InParty(Myself)
-THEN RESPONSE #100 
-SetGlobal("X32PauseTimer","GLOBAL",1)
-RealSetGlobalTimer("X32PauseTalkTimer","GLOBAL",ONE_MINUTE)
-END 
-
 IF
   Global("BD_JOINXP","LOCALS",0)
   InParty(Myself)
@@ -91,7 +83,6 @@ END
 
 
 IF
-RealGlobalTimerExpired("X32PauseTalkTimer","GLOBAL")
 InParty(Myself)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID) 
@@ -104,9 +95,8 @@ Global("X3HelgaTalk","GLOBAL",4)
 Global("X3HelgaTalk","GLOBAL",6)
 THEN
 RESPONSE #100
-RealSetGlobalTimer("X32PauseTalkTimer","GLOBAL",60)
 PlaySong(0)
-PlaySound("X3HSonD")
+//PlaySound("X3HSonD")
 StartDialogueNoSet(Player1)
 END
 

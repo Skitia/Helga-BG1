@@ -1,7 +1,7 @@
 BEGIN X32HELGJ
 
 IF ~Global("X32HelgaTalk","GLOBAL",2)~ Talk1 // After Rest 
-SAY ~We're stopping? Good time as ever. Been wanting to cook up this boar meat before it spoiled.~
+SAY ~We're stopping? Good time as ever. Been wanting to cook up this boar meat before it spoiled.~ [X3HSonD]
 +~Global("X32HelgaInBG1","GLOBAL",1)~+ ~I fondly remember the last meal you cooked for us.~ + T1.A 
 +~Global("X32HelgaInBG1","GLOBAL",1)~+ ~I hope this tastes better than your last attempt.~ + T1.A 
 +~!Global("X32HelgaInBG1","GLOBAL",1)~+ ~I didn't know you could cook.~ + T1.A 
@@ -72,7 +72,7 @@ IF ~~ DO ~SetGlobalTimer("X32HelgaGameTalkTimer","GLOBAL",THREE_DAYS)RealSetGlob
 END
 
 IF ~Global("X32HelgaTalk","GLOBAL",4)~ THEN Talk2 
-SAY ~With all the battles ye lead us into, I might die with a good hammer in me hand.~
+SAY ~With all the battles ye lead us into, I might die with a good hammer in me hand.~ [X3HSonD]
 ++ ~You sound like you're looking forward to it.~ + T2.A 
 ++ ~I will do all I can to keep you alive.~ + T2.B 
 ++ ~If you are weak, you certainly might.~ + T2.C 
@@ -151,7 +151,7 @@ END
 
 
 IF ~Global("X32HelgaTalk","GLOBAL",6)~ THEN Talk3 
-SAY ~Everyday by yer side, ye grow to be a more capable adventurer in me eyes.~
+SAY ~Everyday by yer side, ye grow to be a more capable adventurer in me eyes.~ [X3HSonD]
 ++ ~I must. People are counting on me.~ + T3.A 
 ++ ~What makes you say that?~ + T3.B  
 ++ ~Did you expect anything less?~ + T3.C 
@@ -196,7 +196,7 @@ END
 
 
 IF ~Global("X32HelgaTalk","GLOBAL",8)~ THEN Talk4 
-SAY ~It be good we are resting. I be a bit...sore.~
+SAY ~It be good we are resting. I be a bit...sore.~ [X3HSonD]
 ++ ~Is something wrong?~ DO ~IncrementGlobal("X32HelgaTalk","GLOBAL",1)~ +  T4.A 
 ++ ~I can take a look at you.~ DO ~IncrementGlobal("X32HelgaTalk","GLOBAL",1)~ + T4.B 
 ++ ~Helga getting weak? I thought you were stronger than this.~ DO ~IncrementGlobal("X32HelgaTalk","GLOBAL",1)~ + T4.C 

@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.45~
+VERSION ~1.46~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/eet.tph~

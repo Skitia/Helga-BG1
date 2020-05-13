@@ -58,7 +58,7 @@ END
 
 //Talk 1 
 IF ~Global("X3HelgaTalk","GLOBAL",2)~ Talk1
-SAY ~Someone get a good fire going. Gonna cook this venison I've been saving.~ 
+SAY ~Someone get a good fire going. Gonna cook this venison I've been saving.~ [X3HSonD]
 ++ ~Excellent. I'm glad we have someone to handle the cooking.~ + T1.A
 ++ ~I appreciate you tending to our food, Helga.~ + T1.A
 ++ ~Dwarven cooking? Not interested.~ + T1.A
@@ -158,7 +158,7 @@ END
 // Talk2 
 
 IF ~Global("X3HelgaTalk","GLOBAL",4)~ Talk2 
-SAY ~The good old road. Beats loafing around Beregost any night.~ 
+SAY ~The good old road. Beats loafing around Beregost any night.~ [X3HSonD]  
 ++ ~Are you from Beregost?~ + Talk2.A
 ++ ~I wouldn't mind relaxing in the town, myself.~ + Talk2.B
 ++ ~Aye, I prefer the open road to sitting around.~ + Talk2.C
@@ -212,7 +212,7 @@ SAY ~Bah. And why not? It makes the blood quicken, the heart leap, the moment th
 END 
 // A Little overboard with exit variation, but oh well. 
 IF ~~ Talk2.Exit 
-SAY ~Aye. To the next fight, then.~
+SAY ~Aye. To the next fight, then.~ 
 IF ~~ DO ~RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",3100)IncrementGlobal("X3HelgaTalk","GLOBAL",1)~ EXIT 
 END 
 
@@ -299,7 +299,7 @@ END
 // Talk 3 
 
 IF ~Global("X3HelgaTalk","GLOBAL",6)~ Talk3 
-SAY ~My mind can't help but wander between battles to what the wee ones be getting up to.~
+SAY ~My mind can't help but wander between battles to what the wee ones be getting up to.~ [X3HSonD]
 ++ ~Wee ones?~ + Talk3.A
 ++ ~Are you talking about children?~ + Talk3.A 
 ++ ~Why is your mind wandering at all? We should stay focused.~ + Talk3.B
@@ -347,7 +347,7 @@ END
 // Talk 4
 
 IF ~Global("X3HelgaTalk","GLOBAL",8)~ Talk4 
-SAY ~I would spoke with ye a moment. Why do ye fight?~ [X3HeTalk]
+SAY ~I would spoke with ye a moment. Why do ye fight?~ [X3HSonD]
 ++ ~I want to make the world around safer.~ + Talk4.A
 ++ ~Because people keep trying to kill me.~ + Talk4.B
 ++ ~Isn't it obvious?~ + Talk4.C
@@ -423,7 +423,7 @@ END
 // Talk 5 
 
 IF ~Global("X3HelgaTalk","GLOBAL",10)~ Talk5 
-SAY ~So, when ye bark out yer orders, ye do it with any planning in mind or just on the spot?~
+SAY ~So, when ye bark out yer orders, ye do it with any planning in mind or just on the spot?~ [X3HSonD]
 ++ ~I plan things out. I'm prepared for any foe, any situation to lead our group to victory.~ + Talk5.A 
 ++ ~I think things out on the spot.Things can change at any moment and I prefer to improvise.~ + Talk5.B 
 ++ ~A bit of both. A plan can break down fast and improvisation may be necessary.~ + Talk5.C 
@@ -505,7 +505,7 @@ END
 
 // Talk 6
 IF ~Global("X3HelgaTalk","GLOBAL",12)~ Talk6 
-SAY ~Ye want to know why I began dedicated worship to Haela Brightaxe, <CHARNAME>?~ 
+SAY ~Ye want to know why I began dedicated worship to Haela Brightaxe, <CHARNAME>?~ [X3HSonD]
 ++ ~Certainly.~ + Talk6.A
 ++ ~Why the question?~ + Talk6.B
 ++ ~I don't.~ + Talk6.Exit 

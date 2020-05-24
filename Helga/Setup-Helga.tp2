@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.46~
+VERSION ~1.47~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/eet.tph~
@@ -95,11 +95,18 @@ END
 COPY	"Helga/Kit/X3HBolt.spl" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 damage, +1 fire damage, with a THACO bonus of 1. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for five rounds, plus five more every ten levels.~
+SAY 0x50  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as if a fighter with mastery level of proficiency in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. These are all improved by one every ten levels. The blade acts at a speed factor of nine and lasts for one turn. During this turn, the priest cannot cast any spells.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
+Damage: 1d10, +1 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
 COPY	"Helga/Kit/X3HurlS.spl" override
 	SAY NAME1 ~Hurl Stone~
 	SAY NAME2 ~Hurl Stone~
-	SAY 0x50 ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 2d6 direct magic damage with no save, although it does not bypass magic resistance.~ 
+	SAY 0x50 ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 direct magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are also knocked down for two rounds.~ 
 COPY	"%MOD_FOLDER%/Kit/x3HSW.bam" override
 COPY	"Helga/Kit/x3HBlade.itm" override
 SAY NAME1 ~Flamebolt~
@@ -313,6 +320,12 @@ ACTION_IF FILE_EXISTS_IN_GAME ~x3RecB.dlg~
 THEN BEGIN
   PRINT ~Adding crossmod banter between Helga and Recorder~
 COMPILE ~Helga/Dialogue/Crossmod/Recorder.d~
+END 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banter between Helga and Aura~
+COMPILE ~Helga/Dialogue/Crossmod/Aura.d~
 END 
 
 		COPY ~%MOD_FOLDER%/portraits/HelgaL.bmp~ ~override/HelgaL.bmp~

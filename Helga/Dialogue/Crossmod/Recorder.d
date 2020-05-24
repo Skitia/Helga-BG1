@@ -63,7 +63,7 @@ See("X3Helga")
 CombatCounter(0)
 !See([ENEMY])
 Global("X3HelgaX3Rec","GLOBAL",3)~ THEN X3RecB X3RecX3Helga3
-~Helga, I was thinking about something, Helga, do dwarves not have pets?~
+~Helga, I was thinking about something. Do dwarves not have pets?~
 DO ~SetGlobal("X3HelgaX3Rec","GLOBAL",4)~
 == X3HelgaB ~Ye'd have to take care of it. I barely know how ye do it with your critter.~
 == X3RecB ~It's not easy, but it is really rewarding. Animal friends are so important in my culture, especially when we're young.~

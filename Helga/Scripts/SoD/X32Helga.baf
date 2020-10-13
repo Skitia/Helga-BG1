@@ -4,6 +4,7 @@ IF
   !AreaCheck("BD0120")
   !AreaCheck("BD0130")
   !AreaCheck("BD0103")
+  XPLT(Myself,161000)
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)

@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.48~
+VERSION ~1.5~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
@@ -64,7 +64,7 @@ HURL STONE: The priest creates a magical stone the size of their palm, which fli
 
 -May Cast Flamebolt Once Per Day. Gains one use at level one, level ten, and an additional use every ten levels thereafter. 
 
-FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn. During this turn, the priest cannot cast any spells.
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
 
 Disadvantages:
 -Dwarf only. 
@@ -96,7 +96,7 @@ END
 COPY	"Helga/Kit/X3HBolt.spl" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY 0x50  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn. During this turn, the priest cannot cast any spells.~
+SAY 0x50  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.~
 COPY	"Helga/Kit/X3HurlS.spl" override
 	SAY NAME1 ~Hurl Stone~
 	SAY NAME2 ~Hurl Stone~
@@ -106,7 +106,7 @@ COPY	"%MOD_FOLDER%/Kit/x3HSW.bam" override
 COPY	"Helga/Kit/x3HBlade.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon. Due to its great power and focus needed to maintain it, the wielder may not cast any spells while the blade lasts.
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
 Damage: 1d10, +1 Fire Damage
@@ -118,7 +118,7 @@ Type: Two-handed~
 COPY	"Helga/Kit/x3HBlad2.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon. Due to its great power and focus needed to maintain it, the wielder may not cast any spells while the blade lasts.
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
 Damage: 1d10, +2 Fire Damage
@@ -130,7 +130,7 @@ Type: Two-handed~
 COPY	"Helga/Kit/x3HBlad3.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon. Due to its great power and focus needed to maintain it, the wielder may not cast any spells while the blade lasts.
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
 Damage: 1d10, +3 Fire Damage
@@ -142,7 +142,7 @@ Type: Two-handed~
 COPY	"Helga/Kit/x3HBlad4.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon. Due to its great power and focus needed to maintain it, the wielder may not cast any spells while the blade lasts.
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
 Damage: 1d10, +4 Fire Damage
@@ -154,7 +154,7 @@ Type: Two-handed~
 COPY	"Helga/Kit/x3HBlad5.itm" override
 SAY NAME1 ~Flamebolt~
 SAY NAME2 ~Flamebolt~
-SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon. Due to its great power and focus needed to maintain it, the wielder may not cast any spells while the blade lasts.
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
 Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
 Damage: 1d10, +5 Fire Damage

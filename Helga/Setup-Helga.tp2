@@ -212,7 +212,7 @@ COPY ~%MOD_FOLDER%/cre/X3Helga.cre~ ~override/X3Helga.cre~
   SAY AREA_DAY ~The sun will shine its light on the blood of our enemies.~[]
   SAY AREA_NIGHT ~The most dangerous battles come in the form of darkness.~ []
   SAY SELECT_COMMON1 ~What now?~ [X3HeCom1] //
-  SAY SELECT_COMMON2 ~Yes? What do ye need?.~ [X3HeCom2] //
+  SAY SELECT_COMMON2 ~Yes? What do ye need?~ [X3HeCom2] //
   SAY SELECT_COMMON3 ~Well met.~ [X3HeCom3]
   SAY SELECT_COMMON4 ~What now?~  [X3HeCom1] //
   SAY SELECT_COMMON5 ~Yes? What do ye need?~ [X3HeCom2]

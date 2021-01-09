@@ -71,6 +71,7 @@ COMPILE EVALUATE_BUFFER ~Helga/dialogue/SoD/X32HelgJ.d~
 
 
 // Non-Area Scripts 
+
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32Helga.baf~
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32HelgD.baf~
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32HBant.baf~
@@ -81,8 +82,9 @@ COMPILE EVALUATE_BUFFER ~Helga/Scripts/SoD/X32HBant.baf~
   EXTEND_TOP ~bdintro.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdintro.baf~
   EXTEND_TOP ~bdparty.bcs~ ~%MOD_FOLDER%/scripts/SoD/bdparty.baf~
 ////////////////Area SCRIPTS
+
   EXTEND_TOP ~bd0063.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0063.baf~
-  EXTEND_TOP ~bd0120.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0103.baf~
+  EXTEND_TOP ~bd0103.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0103.baf~
   EXTEND_TOP ~bd0120.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd0120.baf~
   EXTEND_TOP ~bd1000.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd1000.baf~  
   EXTEND_TOP ~bd1100.bcs~ ~%MOD_FOLDER%/scripts/SoD/bd1100.baf~

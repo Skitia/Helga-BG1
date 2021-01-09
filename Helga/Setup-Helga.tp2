@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.51~
+VERSION ~1.52~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
@@ -286,7 +286,7 @@ COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreC.baf~
   WRITE_ASCII 0x248 ~X3Hogre2~ #8  //override script
   WRITE_ASCII 0x280 ~X3Hogre2~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Hogre2~ #8   //pre-joining dialogue file
-  
+
   ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
 INCLUDE ~Helga/Lib/Helga_sod.tpa~ 
 END  

@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.52~
+VERSION ~1.53~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
@@ -323,9 +323,28 @@ THEN BEGIN
 COMPILE ~Helga/Dialogue/Crossmod/Aura.d~
 END 
 
-		COPY ~%MOD_FOLDER%/portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/HelgaS.bmp~ ~override/HelgaS.bmp~
+PRINT ~Choose a portrait for Helga (check mod folder for portraits):~
+
+PRINT ~Please choose one of the following:
+[1] Default by Acifer
+[2] Alt NWN Portrait~
+
+OUTER_SPRINT ~portrait~ ~placeholder_value~
+OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x2) OR (~portrait~ < 0x1)) BEGIN
+  ACTION_READLN ~portrait~
+END
+      ACTION_IF ("portrait" = 1) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/HelgaS.bmp~ ~override/HelgaS.bmp~
+      PRINT ~Portrait: Default by Acifer~
+	  END
+      ACTION_IF ("portrait" = 2) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/AHelgaL.bmp~ ~override/HelgaL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AHelgaM.bmp~ ~override/HelgaM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AHelgaS.bmp~ ~override/HelgaS.bmp~
+      PRINT ~Portrait: Alt NWN Portrait~
+	  END
 		
 PRINT ~Would you like to install Music for Helga? These will play during banters with the player.~
 

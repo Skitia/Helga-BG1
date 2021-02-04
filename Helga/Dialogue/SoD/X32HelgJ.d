@@ -1254,7 +1254,7 @@ SAY  ~Yeah?~
 +~Global("X3HelgaHaelaTopic","GLOBAL",0)~+ ~Can you tell me more about Haela Brightaxe?~ DO ~SetGlobal("X3HelgaHaelaTopic","GLOBAL",1)~ + Helga.PT2Haela 
 +~GlobalGT("X32HelgaTalk","GLOBAL",8)Global("X3HelgaHusbandTopic","GLOBAL",0)~+ ~You mentioned children before, but what about a husband?~ DO ~SetGlobal("X3HelgaHusbandTopic","GLOBAL",1)~ + Helga.PT3Husband
 +~Global("X3HelgaHomeTopic","GLOBAL",0)~+ ~Can you tell me more about your home?~ DO ~SetGlobal("X3HelgaHomeTopic","GLOBAL",1)~ + Helga.PT1
-+~Global("X3HelgaOverTopic","GLOBAL",0)~+ ~What are you going to do when the crusade is over?~ DO ~SetGlobal("X3HelgaOverTopic","GLOBAL",1)~ + Helga.PT4 
++~GlobalGT("Chapter","GLOBAL",8)Global("X3HelgaOverTopic","GLOBAL",0)~+ ~What are you going to do when the crusade is over?~ DO ~SetGlobal("X3HelgaOverTopic","GLOBAL",1)~ + Helga.PT4 
 ++ ~Never mind, let's get going.~ EXIT 
 END 
 

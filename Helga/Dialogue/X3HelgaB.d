@@ -30,7 +30,7 @@ CombatCounter(0)
 !See([ENEMY])
 Global("X3HelgaAlora","GLOBAL",0)~ THEN X3HelgaB X3HelgaAlora1
 ~Cute glances won't save ye all the time, halfling. Ye prepared for that?~
-DO ~SetGlobal("X3milyAlora1","GLOBAL",1)~
+DO ~SetGlobal("X3HelgaAlora","GLOBAL",1)~
 == %ALORA_BANTER% ~I'll always have friends around me, Helga.~
 == X3HelgaB ~That it, then? Relying on friends?~
 == %ALORA_BANTER% ~Friends make everything possible.~

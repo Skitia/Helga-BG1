@@ -220,10 +220,6 @@ COPY ~%MOD_FOLDER%/cre/X3Helga.cre~ ~override/X3Helga.cre~
   SAY SELECT_ACTION1 ~Indeed.~ [X3HeAct1]
   SAY SELECT_ACTION2 ~Mmm. That may work.~ [X3HeAct2]
   SAY SELECT_ACTION3 ~Allow me.~ [X3HeAct3]
-  SAY SELECT_ACTION4 ~Let me see.~ [X3HeAct4]
-  SAY SELECT_ACTION5 ~Yes, of course.~ [X3HeAct5]
-  SAY SELECT_ACTION6 ~I appreciate that.~ [X3HeAct6]
-  SAY SELECT_ACTION7 ~Hmm.~ [X3HeAct7]
   SAY CRITICAL_HIT ~~[X3HeCrit] //
   SAY CRITICAL_MISS ~By Clangeddin's Beard.~ [X3HeCrtM] //
   SAY TARGET_IMMUNE ~My weapon cannot hurt this one.~ [X3HeInff] // 
@@ -233,7 +229,25 @@ COPY ~%MOD_FOLDER%/cre/X3Helga.cre~ ~override/X3Helga.cre~
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []	  
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3cleric~))
-  
+
+ACTION_IF GAME_IS ~bgee~ BEGIN
+  COPY_EXISTING ~X3Helga.cre~ ~override/X3Helga.cre~
+    SAY 0x1E0 ~Let me see.~ [X3HeAct4]                //  SAY BGEE_ACTION4 @33
+    SAY 0x1E4 ~Yes, of course.~ [X3HeAct5]            //  SAY BGEE_ACTION5 @34
+    SAY 0x1E8 ~I appreciate that.~ [X3HeAct6]         //  SAY BGEE_ACTION6 @35
+    SAY 0x1EC ~Hmm.~ [X3HeAct7]                       //  SAY BGEE_ACTION7 @36
+  BUT_ONLY
+END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+  COPY_EXISTING ~X3Helga.cre~ ~override/X3Helga.cre~
+    SAY SELECT_ACTION4 ~Let me see.~ [X3HeAct4]
+    SAY SELECT_ACTION5 ~Yes, of course.~ [X3HeAct5]
+    SAY SELECT_ACTION6 ~I appreciate that.~ [X3HeAct6]
+    SAY SELECT_ACTION7 ~Hmm.~ [X3HeAct7]
+  BUT_ONLY
+END
+
 APPEND ~pdialog.2da~ ~X3Helga X3HelgaP X3HelgaJ X3HelgaD~
   UNLESS ~X3Helga~
 

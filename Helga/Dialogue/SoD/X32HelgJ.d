@@ -1255,6 +1255,7 @@ SAY  ~Yeah?~
 +~GlobalGT("X32HelgaTalk","GLOBAL",8)Global("X3HelgaHusbandTopic","GLOBAL",0)~+ ~You mentioned children before, but what about a husband?~ DO ~SetGlobal("X3HelgaHusbandTopic","GLOBAL",1)~ + Helga.PT3Husband
 +~Global("X3HelgaHomeTopic","GLOBAL",0)~+ ~Can you tell me more about your home?~ DO ~SetGlobal("X3HelgaHomeTopic","GLOBAL",1)~ + Helga.PT1
 +~GlobalGT("Chapter","GLOBAL",8)Global("X3HelgaOverTopic","GLOBAL",0)~+ ~What are you going to do when the crusade is over?~ DO ~SetGlobal("X3HelgaOverTopic","GLOBAL",1)~ + Helga.PT4 
+++ ~Your voice sounds off.~ EXIT 
 ++ ~Never mind, let's get going.~ EXIT 
 END 
 
@@ -1415,6 +1416,13 @@ SAY ~Nay. It nay feel right resting. Got only a little time before I may not be 
 ++ ~Let's talk about something else.~ + Helga.PTalk 
 ++ ~Let's keep moving.~ EXIT 
 END
+
+IF ~~ FixString 
+SAY ~Bah! I be just getting older. Just let me be clearing it up.~
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3HReset")~ EXIT 
+END 
 
 END 
 

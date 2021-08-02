@@ -194,7 +194,7 @@ COPY ~%MOD_FOLDER%/cre/X3Helga.cre~ ~override/X3Helga.cre~
   SAY HAPPY ~I knew this would go well!~ [X3HeHap] //
   SAY UNHAPPY_ANNOYED ~This better be a minor setback.~
   SAY UNHAPPY_SERIOUS ~My patience is running thin with yer constant evil. Do you want to be enemies?~
-  SAY UNHAPPY_BREAKING_POINT ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+  SAY UNHAPPY_BREAKING_POINT ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
   SAY LEADER ~Follow me closely, now.~ [X3HeLead]  //
   SAY TIRED ~I believe we should rest soon.~ [X3HeRest]  //
   SAY BORED ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore] //
@@ -259,7 +259,8 @@ COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HogreL.d~
       EXTEND_TOP ~%bg1_eet_symbol%4600.bcs~ ~Helga/Scripts/AR4600.baf~
         EVALUATE_BUFFER   
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Helga.baf~		
-COMPILE ~Helga/Scripts/X3HelgaD.baf~	
+COMPILE ~Helga/Scripts/X3HelgaD.baf~
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HReset.baf~		
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreL.baf~	
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Hogre2.baf~
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreC.baf~	

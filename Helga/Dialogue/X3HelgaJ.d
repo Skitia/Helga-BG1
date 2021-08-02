@@ -673,7 +673,15 @@ SAY  ~Yeah?~
 +~Global("X3HelgaOgreTopic","GLOBAL",0)~+ ~What made you want to hunt ogres?~ DO ~SetGlobal("X3HelgaOgreTopic","GLOBAL",1)~  + Helga.PT1Ogre  // ~What made you want to hunt ogres?~
 +~GlobalGT("X3HelgaTalk","GLOBAL",4)Global("X3HelgaHaelaTopic","GLOBAL",0)~+ ~Can you tell me more about Haela Brightaxe?~ DO ~SetGlobal("X3HelgaHaelaTopic","GLOBAL",1)~ + Helga.PT2Haela 
 +~GlobalGT("X3HelgaTalk","GLOBAL",6)Global("X3HelgaHusbandTopic","GLOBAL",0)~+ ~You mentioned children before, but what about a husband?~ DO ~SetGlobal("X3HelgaHusbandTopic","GLOBAL",1)~ + Helga.PT3Husband
+++ ~Your voice sounds off.~ EXIT 
 ++ ~Never mind, let's get going.~ EXIT 
+END 
+
+IF ~~ FixString 
+SAY ~Bah! I be just getting older. Just let me be clearing it up.~
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3HReset")~ EXIT 
 END 
 
 IF ~~ Helga.PC1Advice 

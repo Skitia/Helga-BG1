@@ -1,0 +1,37 @@
+@0    = ~Helga~
+@1    = ~We must get out of here!~ [X3HeFear]
+@2    = ~I knew this would go well!~ [X3HeHap]
+@3    = ~This better be a minor setback.~
+@4    = ~My patience is running thin with yer constant evil. Do you want to be enemies?~
+@5    = ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
+@6    = ~Follow me closely, now.~ [X3HeLead]
+@7    = ~I believe we should rest soon.~ [X3HeRest]
+@8    = ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore]
+@9    = ~For honor and glory!~ [X3HeCry1]
+
+@11   = ~By the blood of the all father!~ [X3HeCry3]
+@12   = ~Fall before me!~ [X3HeCry4]
+@13   = ~Give me a hand, here!~ [X3HeCry5]
+
+
+@16   = ~If  yer going to do something, do it fast!~ [X3HeHeal]
+@17   = ~Plenty of beasts we'll find here.~
+@18   = ~What bloody battles are we going to find in a city?~
+@19   = ~I must admit, I'm looking rather forward to exploring some of the ruins we'll find here.~ [X3HeRuin]
+@20   = ~The sun will shine its light on the blood of our enemies.~
+@21   = ~The most dangerous battles come in the form of darkness.~
+@22   = ~What now?~ [X3HeCom1]
+@23   = ~Yes? What do ye need?~ [X3HeCom2]
+@24   = ~Well met.~ [X3HeCom3]
+@25   = ~Indeed.~ [X3HeAct1]
+@26   = ~Mmm. That may work.~ [X3HeAct2]
+@27   = ~Allow me.~ [X3HeAct3]
+@28   = ~Let me see.~ [X3HeAct4]
+@29   = ~Yes, of course.~ [X3HeAct5]
+@30   = ~I appreciate that.~ [X3HeAct6]
+@31   = ~Hmm.~ [X3HeAct7]
+
+@33   = ~By Clangeddin's Beard.~ [X3HeCrtM]
+@34   = ~My weapon cannot hurt this one.~ [X3HeInff]
+@35   = ~I can't carry that. We'll have to leave something behind.~ [X3HeEnc]
+@36   = ~What? Now my magic is failing?~ [X3HeSpel]

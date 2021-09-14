@@ -1,0 +1,128 @@
+@0    = ~1.53~
+@1    = ~Helga NPC Mod~
+@2    = ~AR~
+@3    = ~BG~
+@4    = ~Priest of Haela~
+@5    = ~PRIEST OF HAELA: Renown amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+
+Advantages: 
+
+-May Cast Hurl Stone Once Per Day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
+
+HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.
+
+-May Cast Flamebolt Once Per Day. Gains one use at level one, level ten, and an additional use every ten levels thereafter. 
+
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Disadvantages:
+-Dwarf only. 
+-May only be CN, CG, and NG.~
+@6    = ~Flamebolt~
+@7    = ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.~
+@8    = ~Hurl Stone~
+@9    = ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.~
+@10   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +1 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@11   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +2 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@12   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +3 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@13   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +4 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@14   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +5 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@15   = ~Helga~
+@16   = ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equally number of battles, she seeks to remind her grown children just what she was capable of only decades ago, and to sate her own boredom and lust for combat.~
+@17   = ~We must get out of here!~ [X3HeFear]
+@18   = ~I knew this would go well!~ [X3HeHap]
+@19   = ~This better be a minor setback.~
+@20   = ~My patience is running thin with yer constant evil. Do you want to be enemies?~
+@21   = ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
+@22   = ~Follow me closely, now.~ [X3HeLead]
+@23   = ~I believe we should rest soon.~ [X3HeRest]
+@24   = ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore]
+@25   = ~For honor and glory!~ [X3HeCry1]
+@26   = ~~ [X3HeCry2]
+@27   = ~By the blood of the all father!~ [X3HeCry3]
+@28   = ~Fall before me!~ [X3HeCry4]
+@29   = ~Give me a hand, here!~ [X3HeCry5]
+@30   = ~~ [X3HeDam]
+@31   = ~~ [X3HeDead]
+@32   = ~If  yer going to do something, do it fast!~ [X3HeHeal]
+@33   = ~Plenty of beasts we'll find here.~
+@34   = ~What bloody battles are we going to find in a city?~
+@35   = ~I must admit, I'm looking rather forward to exploring some of the ruins we'll find here.~ [X3HeRuin]
+@36   = ~The sun will shine its light on the blood of our enemies.~
+@37   = ~The most dangerous battles come in the form of darkness.~
+@38   = ~What now?~ [X3HeCom1]
+@39   = ~Yes? What do ye need?~ [X3HeCom2]
+@40   = ~Well met.~ [X3HeCom3]
+@41   = ~Indeed.~ [X3HeAct1]
+@42   = ~Mmm. That may work.~ [X3HeAct2]
+@43   = ~Allow me.~ [X3HeAct3]
+@44   = ~Let me see.~ [X3HeAct4]
+@45   = ~Yes, of course.~ [X3HeAct5]
+@46   = ~I appreciate that.~ [X3HeAct6]
+@47   = ~Hmm.~ [X3HeAct7]
+
+@49   = ~By Clangeddin's Beard.~ [X3HeCrtM]
+@50   = ~My weapon cannot hurt this one.~ [X3HeInff]
+@51   = ~I can't carry that. We'll have to leave something behind.~ [X3HeEnc]
+@52   = ~What? Now my magic is failing?~ [X3HeSpel]
+
+@54   = ~Ogre King~
+@55   = ~Ogre Champion~
+@56   = ~Adding crossmod banter between Helga and Emily~
+@57   = ~Adding crossmod banter between Helga and Kale~
+@58   = ~Adding crossmod banter between Helga and Vienxay~
+@59   = ~Adding crossmod banter between Helga and Recorder~
+@60   = ~Adding crossmod banter between Helga and Aura~
+@61   = ~Choose a portrait for Helga (check mod folder for portraits):~
+@62   = ~Please choose one of the following:
+[1] Default by Acifer
+[2] Alt NWN Portrait~
+@63   = ~placeholder_value~
+@64   = ~Portrait: Default by Acifer~
+@65   = ~Portrait: Alt NWN Portrait~
+@66   = ~Would you like to install Music for Helga? These will play during banters with the player.~
+@67   = ~Please choose one of the following:
+[1] Yes
+[2] No
+~
+@68   = ~Please select 1 or 2 and press Enter.~
+@69   = ~Installed Music for Helga.~
+@70   = ~Did not install Music for Helga.~
+@71   = ~Recruitment Drive
+
+The cleric Helga, formerly of the dwarven expedition, has joined my party. Her divine magic will be helpful in the battles to come.~

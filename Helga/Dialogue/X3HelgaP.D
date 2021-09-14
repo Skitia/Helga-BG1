@@ -17,14 +17,14 @@ END
 // Helga left because the were taking too long. 
 IF ~Global("X3HelgaKickedOut","GLOBAL",1)Global("X3HelgaQuestTimerDone","GLOBAL",1)~ kicked2b
 SAY @5
-+~Dead("X3HogreL")Global("X3HelgaQuest","GLOBAL",0)~+ @6 DO ~SetGlobal("X3HelgaQuestTimerDone","GLOBAL",2)AddJournalEntry(@3,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",1)~  + b2.kill 
++~Dead("X3HogreL")Global("X3HelgaQuest","GLOBAL",0)~+ @6 DO ~SetGlobal("X3HelgaQuestTimerDone","GLOBAL",2)AddJournalEntry(@1003,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",1)~  + b2.kill 
 ++ @7 EXIT 
 END 
 // Helga previously kicked out, and not in party. 
 
 IF ~Global("X3HelgaKickedOut","GLOBAL",1)!Global("X3HelgaQuestTimerDone","GLOBAL",1)~ kicked2
 SAY @8
-+~Dead("X3HogreL")Global("X3HelgaQuest","GLOBAL",0)~+ @6 DO ~AddJournalEntry(@3,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",1)~  + b2.kill 
++~Dead("X3HogreL")Global("X3HelgaQuest","GLOBAL",0)~+ @6 DO ~AddJournalEntry(@1003,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",1)~  + b2.kill 
 +~OR(2)!Dead("X3HogreL")!Global("X3HelgaQuest","GLOBAL",0)~+ @9 + b3.1
 +~OR(2)!Dead("X3HogreL")!Global("X3HelgaQuest","GLOBAL",0)~+ @10 + b3.2
 END 

@@ -46,15 +46,15 @@ EXTERN X3Helga b1.Quest
 
 CHAIN X3Helga b1.YesYes 
 @18
-DO ~AddJournalEntry(@1,QUEST)AddJournalEntry(@11,INFO)JoinParty()~ EXIT 
+DO ~AddJournalEntry(@1001,QUEST)AddJournalEntry(@1011,INFO)JoinParty()~ EXIT 
 
 CHAIN X3Helga b1.Yes 
 @19
-DO ~EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)AddJournalEntry(@1,QUEST)~ EXIT 
+DO ~EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)AddJournalEntry(@1001,QUEST)~ EXIT 
 
 CHAIN X3Helga b1.No 
 @20
-DO ~EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)AddJournalEntry(@1,QUEST)~ EXIT
+DO ~EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)AddJournalEntry(@1001,QUEST)~ EXIT
 
 CHAIN IF ~Global("X3HogreDead","GLOBAL",1)~ THEN X3Helga b2 
 @21
@@ -66,7 +66,7 @@ END
 CHAIN X3Helga b2.kill 
 @25
 == X3Helga @26
-DO ~AddJournalEntry(@3, QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)~ 
+DO ~AddJournalEntry(@1003, QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)~ 
 END 
 ++ @27 + b2.join 
 ++ @28 EXIT 
@@ -74,6 +74,6 @@ END
 CHAIN X3Helga b2.join 
 @29
 == X3Helga @18
-DO ~AddJournalEntry(@11,INFO)JoinParty()~ EXIT 
+DO ~AddJournalEntry(@1011,INFO)JoinParty()~ EXIT 
  
 

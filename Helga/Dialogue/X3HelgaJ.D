@@ -48,12 +48,12 @@ END
 
 IF ~~ X3H.QuestDoneA 
 SAY @14
-IF ~~ DO ~AddJournalEntry(@4,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@1004,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)~ EXIT 
 END 
 
 IF ~~ X3H.QuestDoneB 
 SAY @15
-IF ~~ DO ~AddJournalEntry(@4,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)LeaveParty()EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@1004,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)LeaveParty()EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 //Talk 1 

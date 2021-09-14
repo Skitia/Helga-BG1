@@ -19,7 +19,7 @@ Wait(1)
     ActionOverride("X3Helga",ChangeAIScript("BDFCLE01",GENERAL))
     ActionOverride("X3Helga",ChangeAIScript("",DEFAULT))
     ActionOverride("X3Helga",SetDialog("X32Helga"))
-	ActionOverride("X3Helga",SetPlayerSound(Myself,@100002,EXISTANCE5))
+	ActionOverride("X3Helga",SetPlayerSound(Myself,@16,EXISTANCE5))
 	Continue()
 END 
 	

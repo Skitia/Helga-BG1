@@ -1,0 +1,24 @@
+IF
+	Global("bd_MDD892a_ot","bd4300",0)
+	Global("bd_poison_dsc_supplies","global",0)
+	Dead("bdbelben")  // Belben
+	CombatCounter(0)
+	IsValidForPartyDialog("X3Helga")  // X3Helga
+THEN
+	RESPONSE #100
+		SetGlobal("bd_MDD892a_ot","bd4300",1)
+		SetGlobalTimer("bd_MDD892a_ot_timer","bd4300",ONE_MINUTE)
+		DisplayStringHead("X3Helga",@0)  // 
+END
+
+IF
+  Global("bd_plot","global",370)
+  !GlobalTimerNotExpired("bd_mdd905a_ot_timer","bd4300")
+  Global("bd_ot_X3Helga","bd4300",0)
+  IfValidForPartyDialog("X3Helga")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("bd_mdd905a_ot_timer","bd4300",THREE_MINUTES)
+    SetGlobal("bd_ot_X3Helga","bd4300",1)
+    DisplayStringHead("X3Helga",@1)
+END

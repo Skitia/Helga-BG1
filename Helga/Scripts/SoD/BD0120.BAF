@@ -1,0 +1,54 @@
+// SoD - talk before Korlasz
+
+
+
+IF
+    GlobalLT("X32HelgaCryptComment1","GLOBAL",1)
+	InParty("X3Helga")
+THEN
+  RESPONSE #100
+    SetGlobal("X32HelgaCryptComment1","GLOBAL",1)
+	ActionOverride("X3Helga",ChangeAIScript("X32Helga",OVERRIDE))
+    RealSetGlobalTimer("X32HelgaCryptCommentTimer1","GLOBAL",60)
+END
+
+IF
+    InParty("X3Helga")
+    !StateCheck("X3Helga",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    Global("X32HelgaCryptComment1","GLOBAL",1)
+	RealGlobalTimerExpired("X32HelgaCryptCommentTimer1","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("X32HelgaCryptComment1","GLOBAL",2)
+	DisplayStringHead("X3Helga",@0)
+END
+
+// SoD - talk after Korlasz
+
+IF
+    InParty("X3Helga")
+    Global("X32HelgaCryptComment2","GLOBAL",0)
+	Global("BDSH_Imoen_Floor","GLOBAL",3)
+	Global("BDSH_Rope","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("X32HelgaCryptComment2","GLOBAL",1)
+    RealSetGlobalTimer("X32HelgaCryptCommentTimer2","GLOBAL",6)
+END
+
+IF
+    InParty("X3Helga")
+    !StateCheck("X3Helga",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("X32HelgaCryptCommentTimer2","GLOBAL")
+    Global("X32HelgaCryptComment2","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("X32HelgaCryptComment2","GLOBAL",2)
+	DisplayStringHead("X3Helga",@1)
+END

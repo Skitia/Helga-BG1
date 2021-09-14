@@ -1,0 +1,10 @@
+IF
+	Global("X3_NPC02","MYAREA",0)
+	IsValidForPartyDialog("X3Helga")  // Emily
+	RandomNum(3,3)
+	Delay(3)
+THEN
+	RESPONSE #100
+		SetGlobal("X3_NPC02","MYAREA",1)
+		DisplayStringHead("X3Helga",@0)  
+END

@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.54~
+VERSION @0
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
@@ -193,8 +193,8 @@ APPEND ~interdia.2da~ ~X3Helga X3HelgaB~
   
 /// Journal /// 
   
-ADD_JOURNAL TITLE (@0) @1 @2 @3 @4 USING ~Helga/Tra/English/X3HQuest.tra~
-ADD_JOURNAL TITLE (@10) @11 USING ~Helga/Tra/English/X3HQuest.tra~
+ADD_JOURNAL TITLE (@1000) @1001 @1002 @1003 @1004 USING ~Helga/Tra/English/setup-Helga.tra~
+ADD_JOURNAL TITLE (@1010) @1011 USING ~Helga/Tra/English/setup-Helga.tra~
 
 
 /// Dialogue 

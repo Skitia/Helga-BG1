@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION @0
+VERSION ~1.55~
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~

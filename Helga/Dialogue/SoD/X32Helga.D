@@ -1,5 +1,9 @@
 BEGIN X32Helga
 
+CHAIN IF ~AreaCheck("bd4300")GlobalGT("bd_plot","global",585)~ THEN X3Helga SoDBattleOver 
+@35
+EXIT 
+
 CHAIN IF ~Global("X32HelgaSoDIntro","GLOBAL",1)~ THEN X32Helga Intro 
 @0
 DO ~SetGlobal("X32HelgaSoDIntro","GLOBAL",2)~
@@ -115,11 +119,6 @@ DO ~SetGlobal("bd_joined","locals",0)~ EXIT
 CHAIN X32Helga n.3
 @34
 DO ~JoinParty()~ EXIT
-
-CHAIN IF ~AreaCheck("bd4300")GlobalGT("bd_plot","global",585)~ THEN X3Helga SoDBattleOver 
-@35
-EXIT 
-
  
 
 //Rejoin or Initial rejected

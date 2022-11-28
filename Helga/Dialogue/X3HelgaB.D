@@ -10,14 +10,15 @@ CombatCounter(0)
 !See([ENEMY])
 Global("X3HelgaAjantis","GLOBAL",0)~ THEN X3HelgaB X3HelgaAjantis1
 @0
-DO ~SetGlobal("X3milyAjantis1","GLOBAL",1)~
-== BAJANT @1
+DO ~SetGlobal("X3HelgaAjantis","GLOBAL",1)~
+== %AJANTIS_BANTER% @1
 == X3HelgaB @2
-== BAJANT @3
+== %AJANTIS_BANTER% @3
 == X3HelgaB @4
-== BAJANT @5
+== %AJANTIS_BANTER% @5
 == X3HelgaB @6
 EXIT 
+
 
 
 //Alora 

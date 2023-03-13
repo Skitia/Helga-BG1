@@ -6,7 +6,7 @@
 @5    = ~Ye best be making it fast, else I be having to find a more capable group! Monsters don't slaying themselves.~
 @6    = ~I be returning home to find another group. Ye somehow bloody manage to do it on yer own, come find me in my home in Beregost. Until then, I be leaving this sloth party.~
 @7    = ~Bah. I be tired of all the waiting. I be returning home to find another group. Ye somehow bloody manage to do it on yer own, come find me in my home in Beregost, until then, I'm bloody leaving this sloth party.~
-@8    = ~Bloody brilliant. Bastard is dead and one more blow to these rotten ogre. I ought to call ye giant killer.~
+@8    = ~Bloody brilliant. Bastard is dead and one more blow to these rotten ogres. I ought to call ye giant killer.~
 @9    = ~Ye have my services as long as ye need them. By the looks of it ye be in for many battles, and Haela will be most pleased to see more beasts fallen.~
 @10   = ~Thank you, Helga. I am honored to have you with us.~
 @11   = ~It wasn't hard at all.~
@@ -295,3 +295,13 @@
 @294  = ~A fellow ogre hunter, though yer reasons be more personal. Makes the hunting sweeter.~
 @295  = ~We nay waiting for ye to finish, beast! Grab yer arms and face yer death!~
 @296  = ~Me eat dessert early, pound you to pudding. Mmm, pudding.~
+//New Interjects
+@297  = ~Aye, and a fine prize it be. Be nearly wishing for something fine like this for meself.~
+@298  = ~Bah! Look at what yer cowardice wrought for us.~
+@299 = ~At them, boys!~
+@300 = ~Nay give this beast a single coin, <CHARNAME>. We can deal with him.~
+@301 = ~What ye be doing? We could have handled him.~
+@302 = ~Good that leader smarter than dumb dwarf.~
+@303 = ~Nay let the louts walk over ye. I hear the Amn guards think they can push people around with their foppishness.~
+@304 = ~Aye, Bear River. I can smell the stink of the ogres from here.~
+@305 = ~The Ogre King commands from the west side of the river, just south of the lake. Let's see to it that today is the end of his reign.~

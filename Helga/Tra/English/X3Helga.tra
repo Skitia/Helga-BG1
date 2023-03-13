@@ -1,8 +1,8 @@
 @0    = ~Heh, that all ye got? Not half as tough as the ogres in the north.~
-@1    = ~You killed this ogres all on your own?~
+@1    = ~You killed this ogre all on your own?~
 @2    = ~Who are you?~
 @3    = ~We're just passing through.~
-@4    = ~Aye, been hunting this bastard for a time...though he did a number on me themself. I nay be able to hunt their chieftain on me own.~
+@4    = ~Aye, been hunting this bastard for a time...though he did a number on me himself. I nay be able to hunt their chieftain on me own.~
 @5    = ~Name's Helga. Priest of Haela Brightaxe.~
 @6    = ~My name is <CHARNAME>, a pleasure.~
 @7    = ~I see. Well, I better go.~
@@ -28,3 +28,10 @@
 @27   = ~Why not join me now, then?~
 @28   = ~Farewell.~
 @29   = ~Ha. Knew ye'd be back for me.~
+@200103  = ~^RHelga slightly disapproves.^-~
+@200106  = ~^RHelga disapproves.^-~
+@200109  = ~^RHelga greatly disapproves.^-~
+@200113  = ~^GHelga slightly approves^-~
+@200116  = ~^GHelga approves^-~
+@200119  = ~^GHelga greatly approves^-~
+@20099 = ~^0xFFFF00FFYou have established a deep bond with Helga. Your synergy has improved her capabilities.^-~

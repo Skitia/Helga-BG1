@@ -1,13 +1,13 @@
-@0    = ~1.55~
+@0    = ~1.54~
 @1    = ~Helga NPC Mod~
 @2    = ~AR~
 @3    = ~BG~
 @4    = ~Priest of Haela~
-@5    = ~PRIEST OF HAELA: Renown amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+@5    = ~PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
 
 Advantages: 
 
--May Cast Hurl Stone Once Per Day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
+-May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
 
 HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.
 
@@ -63,7 +63,7 @@ Speed Factor: 9
 Proficiency Type: Greatsword
 Type: Two-handed~
 @15   = ~Helga~
-@16   = ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equally number of battles, she seeks to remind her grown children just what she was capable of only decades ago, and to sate her own boredom and lust for combat.~
+@16   = ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equal number of battles, she seeks to remind her grown children just what she was capable of only decades ago, and to sate her own boredom and lust for combat.~
 @17   = ~We must get out of here!~ [X3HeFear]
 @18   = ~I knew this would go well!~ [X3HeHap]
 @19   = ~This better be a minor setback.~
@@ -124,9 +124,28 @@ Type: Two-handed~
 @69   = ~Installed Music for Helga.~
 @70   = ~Did not install Music for Helga.~
 @71   = ~Recruitment Drive
-
 The cleric Helga, formerly of the dwarven expedition, has joined my party. Her divine magic will be helpful in the battles to come.~
-@1000 = ~The Ogre King.~
+@996    = ~Fighter / Priest of Haela~
+@997    = ~FIGHTER/PRIEST OF HAELA: This character can use the abilities of a Fighter and Priest of Haela, though are limited to the weapons allowed by the cleric's ethos. They may specialize in, but not master, any weapon they can use.
+
+PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+
+Advantages: 
+
+-May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
+
+HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.
+
+-May Cast Flamebolt Once Per Day. Gains one use at level one, level ten, and an additional use every ten levels thereafter. 
+
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Disadvantages:
+-Dwarf only. 
+-May only be CN, CG, and NG.~
+@998  = ~Priest of Haelga (Fighter Multi-class)~
+@999  = ~Helga Alternate Class: Fighter/Priest of Haelga~
+@1000 = ~The Ogre King~
 
 @1001 = ~The Ogre King 
 
@@ -149,3 +168,11 @@ Helga was impressed with our work, and pledged to continue to travel with us and
 @1011 = ~The Priestess of Haela Brightaxe 
 
 The dwarf Helga has joined our party, a priestess of a goddess known as Haela Brightaxe. Her love of battle should do well for the party.~
+
+@200103  = ~^RHelga slightly disapproves.^-~
+@200106  = ~^RHelga disapproves.^-~
+@200109  = ~^RHelga greatly disapproves.^-~
+@200113  = ~^GHelga slightly approves^-~
+@200116  = ~^GHelga approves^-~
+@200119  = ~^GHelga greatly approves^-~
+@20099 = ~^0xFFFF00FFYou have established a deep bond with Helga. Your synergy has improved her capabilities.^-~

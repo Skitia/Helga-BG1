@@ -1,21 +1,21 @@
 @0    = ~Helga~
-@1    = ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equally number of battles, she seeks that final glorious battle that will define her legacy, and be her fall.~
+@1    = ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equal number of battles, she seeks that final glorious battle that will define her legacy, and be her fall.~
 @2    = ~We must get out of here!~ [X3HeFear]
 @3    = ~I knew this would go well!~ [X3HeHap]
 @4    = ~This better be a minor setback.~
 @5    = ~My patience is running thin with yer constant evil. Do you want to be enemies?~
-@6    = ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+@6    = ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
 @7    = ~Follow me closely, now.~ [X3HeLead]
 @8    = ~I believe we should rest soon.~ [X3HeRest]
 @9    = ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore]
 @10   = ~For honor and glory!~ [X3HeCry1]
 
-@12   = ~By the blood of the all father!~ [X3HeCry3]
+@12   = ~By the blood of the All Father!~ [X3HeCry3]
 @13   = ~Fall before me!~ [X3HeCry4]
-@14   = ~Give me a hand, here!~ [X3HeCry5]
+@14   = ~Give me a hand here!~ [X3HeCry5]
 
 
-@17   = ~If  yer going to do something, do it fast!~ [X3HeHeal]
+@17   = ~If yer going to do something, do it fast!~ [X3HeHeal]
 @18   = ~Take a look over here, this is interesting.~ [X3HeFor]
 @19   = ~What bloody battles are we going to find in a city?~
 @20   = ~Keep yer eyes open. See if there's anything to spot.~ [X3HeDun]

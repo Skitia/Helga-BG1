@@ -3,65 +3,100 @@
 @2    = ~AR~
 @3    = ~BG~
 @4    = ~Priest of Haela~
-@5    = ~PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+@5    = ~PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be.
 
-Advantages: 
+Advantages:
 
--May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
+- May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter.
 
 HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.
 
--May Cast Flamebolt Once Per Day. Gains one use at level one, level ten, and an additional use every ten levels thereafter. 
+- May cast Flamebolt once per day. Gains one use at level one, level ten, and an additional use every ten levels thereafter.
 
-FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon grants a +3 bonus to THAC0 and deals 1d10 slashing damage plus 1 fire damage, with the fire damage increasing by +1 every 5 levels. The weapon has a speed factor of 9 and lasts for one turn.
 
 Disadvantages:
--Dwarf only. 
--May only be CN, CG, and NG.~
+-Dwarf only.
+-May only be Chaotic Neutral, Chaotic Good, and Neutral Good.~
 @6    = ~Flamebolt~
-@7    = ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.~
+@7    = ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon grants a +3 bonus to THAC0 and deals 1d10 slashing damage plus 1 fire damage, with the fire damage increasing by +1 every 5 levels. The weapon has a speed factor of 9 and lasts for one turn.~
 @8    = ~Hurl Stone~
 @9    = ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.~
 @10   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
-Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
-Damage: 1d10, +1 Fire Damage
+STATISTICS:
+
+Equipped abilities:
+– Automatically grants Mastery in Two-handed Swords
+– Attacks per round: +1
+– May not cast spells
+
 THAC0: +3
+Damage: 1d10, +1 fire damage
 Speed Factor: 9
-Proficiency Type: Greatsword
+Proficiency Type: Two-handed Sword
 Type: Two-handed~
+
 @11   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
-Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
-Damage: 1d10, +2 Fire Damage
+STATISTICS:
+
+Equipped abilities:
+– Automatically grants Mastery in Two-handed Swords
+– Attacks per round: +1
+– May not cast spells
+
 THAC0: +3
+Damage: 1d10, +2 fire damage
 Speed Factor: 9
-Proficiency Type: Greatsword
+Proficiency Type: Two-handed Sword
 Type: Two-handed~
+
 @12   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
-Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
-Damage: 1d10, +3 Fire Damage
+STATISTICS:
+
+Equipped abilities:
+– Automatically grants Mastery in Two-handed Swords
+– Attacks per round: +1
+– May not cast spells
+
 THAC0: +3
+Damage: 1d10, +3 fire damage
 Speed Factor: 9
-Proficiency Type: Greatsword
+Proficiency Type: Two-handed Sword
 Type: Two-handed~
+
 @13   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
-Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
-Damage: 1d10, +4 Fire Damage
+STATISTICS:
+
+Equipped abilities:
+– Automatically grants Mastery in Two-handed Swords
+– Attacks per round: +1
+– May not cast spells
+
 THAC0: +3
+Damage: 1d10, +4 fire damage
 Speed Factor: 9
-Proficiency Type: Greatsword
+Proficiency Type: Two-handed Sword
 Type: Two-handed~
+
 @14   = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
 
-Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
-Damage: 1d10, +5 Fire Damage
+STATISTICS:
+
+Equipped abilities:
+– Automatically grants Mastery in Two-handed Swords
+– Attacks per round: +1
+– May not cast spells
+
 THAC0: +3
+Damage: 1d10, +5 fire damage
 Speed Factor: 9
-Proficiency Type: Greatsword
+Proficiency Type: Two-handed Sword
 Type: Two-handed~
+
 @15   = ~Helga~
 @16   = ~Helga gives a long laugh when you ask about her past. A wild child in her youth, she leaped into the clergy of Haela early on, inspired by the tales of dwarven women's ferocity and feats. Now having lived over a hundred years, and fought in an equal number of battles, she seeks to remind her grown children just what she was capable of only decades ago, and to sate her own boredom and lust for combat.~
 @17   = ~We must get out of here!~ [X3HeFear]
@@ -74,12 +109,12 @@ Type: Two-handed~
 @24   = ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore]
 @25   = ~For honor and glory!~ [X3HeCry1]
 @26   = ~~ [X3HeCry2]
-@27   = ~By the blood of the all father!~ [X3HeCry3]
+@27   = ~By the blood of the All Father!~ [X3HeCry3]
 @28   = ~Fall before me!~ [X3HeCry4]
 @29   = ~Give me a hand, here!~ [X3HeCry5]
 @30   = ~~ [X3HeDam]
 @31   = ~~ [X3HeDead]
-@32   = ~If  yer going to do something, do it fast!~ [X3HeHeal]
+@32   = ~If yer going to do something, do it fast!~ [X3HeHeal]
 @33   = ~Plenty of beasts we'll find here.~
 @34   = ~What bloody battles are we going to find in a city?~
 @35   = ~I must admit, I'm looking rather forward to exploring some of the ruins we'll find here.~ [X3HeRuin]
@@ -128,44 +163,44 @@ The cleric Helga, formerly of the dwarven expedition, has joined my party. Her d
 @996    = ~Fighter / Priest of Haela~
 @997    = ~FIGHTER/PRIEST OF HAELA: This character can use the abilities of a Fighter and Priest of Haela, though are limited to the weapons allowed by the cleric's ethos. They may specialize in, but not master, any weapon they can use.
 
-PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be.
 
-Advantages: 
+Advantages:
 
--May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
+- May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter.
 
-HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.
+HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs. Spell, they are knocked down to the ground for two rounds.
 
--May Cast Flamebolt Once Per Day. Gains one use at level one, level ten, and an additional use every ten levels thereafter. 
+- May cast Flamebolt once per day. Gains one use at level one, level ten, and an additional use every ten levels thereafter.
 
-FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon grants a +3 bonus to THAC0 and deals 1d10 slashing damage plus 1 fire damage, with the fire damage increasing by +1 every 5 levels. The weapon has a speed factor of 9 and lasts for one turn.
 
 Disadvantages:
--Dwarf only. 
--May only be CN, CG, and NG.~
+-Dwarf only.
+-May only be Chaotic Neutral, Chaotic Good, and Neutral Good.~
 @998  = ~Fighter/Priest of Haela (Fighter Multi-class)~
 @999  = ~Helga Alternate Class: Fighter/Priest of Haela~
 @1000 = ~The Ogre King~
 
-@1001 = ~The Ogre King 
+@1001 = ~The Ogre King
 
 Helga, a priest of Haela Brightaxe, has asked us to kill the leader of an ogre tribe that stalks in land north of the Gnoll Stronghold.~
 
-@1002 = ~The Ogre King 
+@1002 = ~The Ogre King
 
 We have slain the Ogre King. Helga will be pleased.~
 
-@1003 = ~The Ogre King 
+@1003 = ~The Ogre King
 
 Helga was impressed with our work, and offered her service in arms to our party whenever desired.~
 
-@1004 = ~The Ogre King 
+@1004 = ~The Ogre King
 
 Helga was impressed with our work, and pledged to continue to travel with us and give her might to our party.~
 
 @1010 = ~The Priestess of Haela Brightaxe~
 
-@1011 = ~The Priestess of Haela Brightaxe 
+@1011 = ~The Priestess of Haela Brightaxe
 
 The dwarf Helga has joined our party, a priestess of a goddess known as Haela Brightaxe. Her love of battle should do well for the party.~
 

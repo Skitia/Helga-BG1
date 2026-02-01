@@ -264,10 +264,12 @@ COMPILE EVALUATE_BUFFER ~Helga/dialogue/X3HogreL.d~
       EXTEND_TOP ~%bg1_eet_symbol%4600.bcs~ ~Helga/Scripts/AR4600.baf~
         EVALUATE_BUFFER   
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Helga.baf~		
-COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HelgaD.baf~	
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HelgaD.baf~
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HelR.baf~		
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreL.baf~	
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3Hogre2.baf~
 COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HogreC.baf~	
+COMPILE EVALUATE_BUFFER ~Helga/Scripts/X3HReset.baf~
 
   COPY ~%MOD_FOLDER%/cre/X3Hogre.cre~ ~override/X3Hogre.cre~
   WRITE_ASCII 0x248 ~X3Hogre~ #8  //override script
@@ -328,37 +330,6 @@ THEN BEGIN
 COMPILE ~Helga/Dialogue/Crossmod/Aura.d~
 END 
 
-PRINT @61
-
-PRINT @62
-
-OUTER_SPRINT ~portrait~ @63
-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x2) OR (~portrait~ < 0x1)) BEGIN
-  ACTION_READLN ~portrait~
-END
-      ACTION_IF ("portrait" = 1) THEN BEGIN
-		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/HelgaS.bmp~ ~override/HelgaS.bmp~
-      PRINT @64
-	  END
-      ACTION_IF ("portrait" = 2) THEN BEGIN
-		COPY ~%MOD_FOLDER%/Portraits/AHelgaL.bmp~ ~override/HelgaL.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/AHelgaM.bmp~ ~override/HelgaM.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/AHelgaS.bmp~ ~override/HelgaS.bmp~
-      PRINT @65
-	  END
-		
-PRINT @66
-
-PRINT @67
-
-OUTER_SPRINT ~music~ @63
-OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
-  PRINT @68
-  ACTION_READLN ~music~
-END
-      ACTION_IF ("music" = 1) THEN BEGIN
 	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
 
 	MKDIR ~music/blank~
@@ -381,12 +352,20 @@ LAF HANDLE_AUDIO
     sox_path = ~Helga/music~
 END
 
-PRINT @69
-END 
+BEGIN @64
+SUBCOMPONENT @61
+		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/HelgaS.bmp~ ~override/HelgaS.bmp~
+BEGIN @65
+SUBCOMPONENT @61
+		COPY ~%MOD_FOLDER%/Portraits/AHelgaL.bmp~ ~override/HelgaL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AHelgaM.bmp~ ~override/HelgaM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AHelgaS.bmp~ ~override/HelgaS.bmp~
 
-ACTION_IF ("music" = 2) THEN BEGIN
-PRINT @70
-END 
+		
+
+
 
 
 BEGIN @998

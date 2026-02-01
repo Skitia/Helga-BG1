@@ -1,69 +1,3 @@
-// EXPERIENCE
-
-IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,31999)
-  XPLT(Myself,32000)
-THEN
-  RESPONSE #100
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,32000,SET)
-END
-
-IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,15999)
-  XPLT(Myself,16000)
-THEN
-  RESPONSE #100
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,16000,SET)
-END
-
-IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,7999)
-  XPLT(Myself,8000)
-THEN
-  RESPONSE #100
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,8000,SET)
-END
-
-IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,3999)
-  XPLT(Myself,4000)
-THEN
-  RESPONSE #100
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,4000,SET)
-END
-
-IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,1999)
-  XPLT(Myself,2000)
-THEN
-  RESPONSE #100
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,2000,SET)
-END
-
-IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPLT(Player1,2000)
-THEN
-  RESPONSE #100
-    SetGlobal("BD_JOINXP","LOCALS",1)
-	ChangeStat(Myself,XP,1000,SET)
-END
 
 //Does Helga's quest after recruiting. 
 IF 
@@ -140,6 +74,34 @@ THEN RESPONSE #100
 StartDialogueNoSet(Player1)
 END 
 
+IF 
+AreaCheck("%bg1_eet_symbol%4600")
+InParty(Myself)
+!Dead("X3HogreL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3EnterOgreLand","GLOBAL",0)
+THEN RESPONSE #100
+SetGlobal("X3EnterOgreLand","GLOBAL",1)
+END 
+
+IF 
+AreaCheck("%bg1_eet_symbol%4600")
+InParty(Myself)
+!Dead("X3HogreL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3EnterOgreLand","GLOBAL",1)
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+
 //Talk Block 
 IF
 InParty(Myself)
@@ -210,6 +172,109 @@ THEN RESPONSE #100
 SetGlobal("X3HelRage","LOCALS",0)
 END 
 
+
+//Approval Shifts 
+
+IF 
+InParty(Myself)
+Switch("X3HelgaAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@200109)
+RESPONSE #2
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@200109)
+RESPONSE #3
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@200106)
+RESPONSE #4
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@200106)
+RESPONSE #5
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@200103)
+RESPONSE #6
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@200113)
+RESPONSE #8
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@200116)
+RESPONSE #9
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@200116)
+RESPONSE #10
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@200119)
+RESPONSE #11
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+IncrementGlobal("X3HelgaApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@200119)
+END 
+
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3HelgaAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelgaAppChange","GLOBAL",0)
+END
+
+//Reset to 90 if past max/reward bonus stats.
+IF 
+GlobalGT("X3HelgaApp","GLOBAL",90)
+InParty(Myself)
+Switch("X3HelgaAppMaxBonus","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3HelgaApp","GLOBAL",90)
+SetGlobal("X3HelgaAppMaxBonus","LOCALS",1)
+ChangeStat(Myself,INT,1,ADD)
+DisplayStringNoNameDlg(Player1,@20099)
+RESPONSE #1 
+SetGlobal("X3HelgaApp","GLOBAL",90)
+END 
+
+//Custom Approval Shifts - Any Shifts not accompanied directly by dialogue. Make sure they are blocked if they are not in the party.
+
+
+
+//Breaks 
+IF 
+GlobalLT("X3IsaacApp","GLOBAL",-39)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END
+
+IF 
+InParty("X3Isaac") 
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(2)
+Global("X3X3IsaacBreak","GLOBAL",2)
+Global("X3X3IsaacBreak","GLOBAL",4)
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
 // SEX CHANGE
 
 IF
@@ -222,4 +287,83 @@ THEN
 	Wait(1)
 	SetGlobal("X3HelgaSexChange","GLOBAL",1)
 	StartDialogueNoSet(Player1)
+END
+
+
+
+// EXPERIENCE
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,31999)
+	XPLT(Myself,32000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,32000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,15999)
+	XPLT(Myself,16000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,16000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,7999)
+	XPLT(Myself,8000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,8000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,3999)
+	XPLT(Myself,4000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,4000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,1999)
+	XPLT(Myself,2000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,2000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		SetInterrupt(TRUE)
 END

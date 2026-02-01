@@ -20,7 +20,6 @@ DO ~SetGlobal("X3HelgaAjantis","GLOBAL",1)~
 EXIT 
 
 
-
 //Alora 
 CHAIN IF ~InParty("X3Helga")
 See("X3Helga")

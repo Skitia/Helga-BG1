@@ -1248,14 +1248,16 @@ SAY  @179
 +~Global("Chapter","GLOBAL",7)~+ @191 + Helga.PC7Advice // @191
 // Companion Thoughts 
 +~NumInPartyAliveGT(2)~+ @192 + Helga.PCompanionThoughts // @192 
-+~ReputationGT(Player1,5)~+ @193 + Em.Me1 // @193
-+~ReputationLT(Player1,6)~+ @193 + Em.Me2 // @193
++~ReputationGT(Player1,5)GlobalLT("X3HelgaApp","GLOBAL",15)~+ @214 + Em.Me1 // @193
++~ReputationLT(Player1,6)~+ @214 + Em.Me2 // @193
++~ReputationGT(Player1,6)GlobalLT("X3HelgaApp","GLOBAL",45)GlobalGT("X3HelgaApp","GLOBAL",14)~+ @214 + Em.Me3 // @244
++~ReputationGT(Player1,6)GlobalGT("X3HelgaApp","GLOBAL",44)~+ @214 + Em.Me4 // @245
 // Dialogue From Talk Expansions. These fire once. 
 +~Global("X3HelgaHaelaTopic","GLOBAL",0)~+ @194 DO ~SetGlobal("X3HelgaHaelaTopic","GLOBAL",1)~ + Helga.PT2Haela 
 +~GlobalGT("X32HelgaTalk","GLOBAL",8)Global("X3HelgaHusbandTopic","GLOBAL",0)~+ @195 DO ~SetGlobal("X3HelgaHusbandTopic","GLOBAL",1)~ + Helga.PT3Husband
 +~Global("X3HelgaHomeTopic","GLOBAL",0)~+ @196 DO ~SetGlobal("X3HelgaHomeTopic","GLOBAL",1)~ + Helga.PT1
 +~GlobalGT("Chapter","GLOBAL",8)Global("X3HelgaOverTopic","GLOBAL",0)~+ @197 DO ~SetGlobal("X3HelgaOverTopic","GLOBAL",1)~ + Helga.PT4 
-++ @198 EXIT 
+++ @198 + FixString
 ++ @199 EXIT 
 END 
 
@@ -1306,6 +1308,16 @@ END
 
 IF ~~ Em.Me2 
 SAY @209
+IF ~~ EXIT 
+END 
+
+IF ~~ Em.Me3 
+SAY @244
+IF ~~ EXIT 
+END 
+
+IF ~~ Em.Me4 
+SAY @245
 IF ~~ EXIT 
 END 
 

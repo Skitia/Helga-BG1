@@ -23,7 +23,7 @@ END
 
 IF ~~ X3H.Quest2ELeave 
 SAY @6
-IF ~~ DO ~SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
+IF ~~ DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 
@@ -32,7 +32,7 @@ END
 
 IF ~Global("X3HelgaQuestExpire","GLOBAL",6)!Dead("X3HogreL")~ X3H.Quest1E 
 SAY @7
-IF ~~ DO ~SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
+IF ~~ DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)SetGlobal("X3HelgaQuestExpireOne","GLOBAL",7)SetGlobal("X3HelgaQuestTimerDone","GLOBAL",1)EscapeAreaMove("%bg1_eet_symbol%3302",252,249,SW)~ EXIT 
 END 
 
 // Quest Done 
@@ -48,7 +48,7 @@ END
 
 IF ~~ X3H.QuestDoneA 
 SAY @14
-IF ~~ DO ~AddJournalEntry(@1004,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)~ EXIT 
+IF ~~ DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",11)AddJournalEntry(@1004,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",2)~ EXIT 
 END 
 
 IF ~~ X3H.QuestDoneB 
@@ -59,14 +59,14 @@ END
 //Talk 1 
 IF ~Global("X3HelgaTalk","GLOBAL",2)~ Talk1
 SAY @16
-++ @17 + T1.A
-++ @18 + T1.A
-++ @19 + T1.A
+++ @17 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",6)~ + T1.A
+++ @18 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + T1.A
+++ @19 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + T1.A
 END 
 
 IF ~~ T1.A
 SAY @20
-++ @21 + T1.B
+++ @21 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + T1.B
 ++ @22 + T1.C
 ++ @23 + T1.D 
 IF ~~ EXIT 
@@ -95,7 +95,7 @@ END
 IF ~~ T1.E
 SAY @28
 = @29
-++ @30 + T1.F
+++ @30 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + T1.F
 ++ @31 + T1.F
 ++ @32 + T1.G
 END 
@@ -104,7 +104,7 @@ IF ~~ T1.F
 SAY @33
 = @34
 ++ @35 + T1.Dead1 
-++ @36 + T1.Almost1
+++ @36 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + T1.Almost1
 ++ @37 + T1.CookG 
 END 
 
@@ -120,7 +120,7 @@ END
 
 IF ~~ T1.CookG 
 SAY @40
-++ @41 + T1.H
+++ @41 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + T1.H
 ++ @42 + T1.CR
 ++ @43 + T1.H
 END 
@@ -129,7 +129,7 @@ IF ~~ T1.G
 SAY @44
 = @45
 ++ @35 + T1.Dead2
-++ @36 + T1.Almost2 
+++ @36 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + T1.Almost2 
 ++ @37 + T1.CookB
 END 
 
@@ -145,9 +145,9 @@ END
 
 IF ~~ T1.CookB
 SAY @46
-++ @47+ T1.H
+++ @47 + T1.H
 ++ @42 + T1.CR
-++ @48 + T1.H 
+++ @48 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + T1.H 
 END 
 
 IF ~~ T1.H 
@@ -159,9 +159,9 @@ END
 
 IF ~Global("X3HelgaTalk","GLOBAL",4)~ Talk2 
 SAY @50  
-++ @51 + Talk2.A
-++ @52 + Talk2.B
-++ @53 + Talk2.C
+++ @51 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",6)~ + Talk2.A
+++ @52 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + Talk2.B
+++ @53 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Talk2.C
 END 
 
 
@@ -171,14 +171,14 @@ SAY @54
 = @55 
 ++ @56 + Talk2.D
 ++ @57 + Talk2.E
-++ @58  + Talk2.F
+++ @58 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk2.F
 END 
 
 IF ~~ Talk2.B
 SAY @59
-++ @60 + Talk2.G
+++ @60 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk2.G
 ++ @61 + Talk2.H
-++ @62 + Talk2.I
+++ @62 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-3)~ + Talk2.I
 END 
 
 IF ~~ Talk2.C 
@@ -193,7 +193,7 @@ SAY @65
 = @66
 ++ @67 + Talk2.J 
 ++ @68 + Talk2.K 
-++ @69 + Talk2.L
+++ @69 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk2.L
 END 
  
 IF ~~ Talk2.E 
@@ -206,9 +206,9 @@ END
 
 IF ~~ Talk2.F 
 SAY @72
-++ @73 + Talk2.M 
-++ @74 + Talk2.N 
-++ @75 + Talk2.O 
+++ @73 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk2.M 
+++ @74 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk2.N 
+++ @75 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-2)~ + Talk2.O 
 END 
 // A Little overboard with exit variation, but oh well. 
 IF ~~ Talk2.Exit 
@@ -267,7 +267,7 @@ SAY @86
 = @88
 ++ @89 + Talk2.Story2 
 ++ @90 + Talk2.Story1 
-++ @91 + Talk2.Exit 
+++ @91 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk2.Exit 
 END 
 
 IF ~~ Talk2.Story1 
@@ -281,7 +281,7 @@ SAY @93
 = @95
 ++ @96 + Talk2.Story3 
 ++ @97 + Talk2.Story4
-++ @98 + Talk2.Exit 
+++ @98 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk2.Exit 
 END 
 
 IF ~~ Talk2.Story3 
@@ -300,16 +300,16 @@ END
 
 IF ~Global("X3HelgaTalk","GLOBAL",6)~ Talk3 
 SAY @103
-++ @104 + Talk3.A
-++ @105 + Talk3.A 
-++ @106 + Talk3.B
+++ @104 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Talk3.A
+++ @105 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Talk3.A 
+++ @106 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + Talk3.B
 END 
 
 IF ~~ Talk3.A 
 SAY @107
 ++ @108 + Talk3.C 
 ++ @109 + Talk3.D
-++ @110 + Talk3.B 
+++ @110 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk3.B 
 END 
 
 IF ~~ Talk3.B 
@@ -348,11 +348,11 @@ END
 
 IF ~Global("X3HelgaTalk","GLOBAL",8)~ Talk4 
 SAY @120
-++ @121 + Talk4.A
-++ @122 + Talk4.B
-++ @123 + Talk4.C
-++ @124 + Talk4.D
-++ @125+ Talk4.E
+++ @121 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Talk4.A
+++ @122 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",6)~ + Talk4.B
+++ @123 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + Talk4.C
+++ @124 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",6)~ + Talk4.D
+++ @125 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~ + Talk4.E
 END 
 
 IF ~~ Talk4.A
@@ -369,16 +369,16 @@ IF ~~ Talk4.C
 SAY @128 
 ++ @121 + Talk4.A
 ++ @122 + Talk4.B
-++ @125+ Talk4.E
-++ @129 + Talk4.Exit 
+++ @125 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk4.E
+++ @129 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk4.Exit 
 END 
 
 IF ~~ Talk4.D 
 SAY @130
 ++ @121 + Talk4.A
 ++ @122 + Talk4.B
-++ @125+ Talk4.E
-++ @129 + Talk4.Exit 
+++ @125 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk4.E
+++ @129 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk4.Exit 
 END 
 
 IF ~~ Talk4.E 
@@ -395,7 +395,7 @@ IF ~~ Talk4.Fight
 SAY @133
 = @134
 ++ @135 + Talk4.F 
-++ @136 + Talk4.G
+++ @136 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk4.G
 ++ @137 + Talk4.H
 END 
 
@@ -424,9 +424,9 @@ END
 
 IF ~Global("X3HelgaTalk","GLOBAL",10)~ Talk5 
 SAY @143
-++ @144 + Talk5.A 
-++ @145 + Talk5.B 
-++ @146 + Talk5.C 
+++ @144 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + Talk5.A 
+++ @145 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~ + Talk5.B 
+++ @146 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Talk5.C 
 END 
 
 IF ~~ Talk5.A 
@@ -448,21 +448,21 @@ IF ~~ Talk5.Fight
 SAY @150
 = @151
 ++ @152 + Talk5.D
-++ @153 + Talk5.G
-++ @154 + Talk5.F
+++ @153 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk5.G
+++ @154 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk5.F
 END 
 
 IF ~~ Talk5.D 
 SAY @155
 = @156
-++ @153 + Talk5.G
-++ @157 + Talk5.G
+++ @153 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk5.G
+++ @157 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk5.G
 END 
 
 IF ~~ Talk5.H
 SAY @158 
-++ @159 + Talk5.I 
-++ @160 + Talk5.J 
+++ @159 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",2)~ + Talk5.I 
+++ @160 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk5.J 
 ++ @161 + Talk5.K 
 ++ @162 + Talk5.L 
 END 
@@ -470,14 +470,14 @@ END
 IF ~~ Talk5.F 
 SAY @163 
 ++ @164 + Talk5.D 
-++ @153 + Talk5.G 
-++ @157 + Talk5.G 
+++ @153 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk5.G
+++ @157 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk5.G
 END 
 
 IF ~~ Talk5.G
 SAY @165 
-++ @159 + Talk5.I 
-++ @160 + Talk5.J 
+++ @159 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",2)~ + Talk5.I 
+++ @160 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",1)~ + Talk5.J 
 ++ @161 + Talk5.K 
 ++ @162 + Talk5.L
 END 
@@ -506,9 +506,9 @@ END
 // Talk 6
 IF ~Global("X3HelgaTalk","GLOBAL",12)~ Talk6 
 SAY @170
-++ @171 + Talk6.A
-++ @124 + Talk6.B
-++ @172 + Talk6.Exit 
+++ @171 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Talk6.A
+++ @124 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",6)~ + Talk6.B
+++ @172 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + Talk6.Exit 
 END 
 
 IF ~~ Talk6.A
@@ -516,13 +516,13 @@ SAY @173
 = @174
 ++ @175 + Talk6.D
 ++ @89 + Talk6.E
-++ @176 + Talk6.Exit 
+++ @176 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk6.Exit 
 END 
 
 IF ~~ Talk6.B 
 SAY @177
 ++ @178 + Talk6.A 
-++ @179 + Talk6.Exit 
+++ @179 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk6.Exit 
 END 
 
 IF ~~ Talk6.Exit
@@ -543,9 +543,9 @@ END
 IF ~~ Talk6.F 
 SAY @183
 = @184
-++ @185 + Talk6.G 
-++ @186 + Talk6.H
-++ @187 + Talk6.I
+++ @185 DO ~IncrementGlobal("X3HelgaTalk","GLOBAL",1)~ + Talk6.G 
+++ @186 DO ~IncrementGlobal("X3HelgaTalk","GLOBAL",1)~ + Talk6.H
+++ @187 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-1)~ + Talk6.I
 END 
 
 IF ~~ Talk6.G 
@@ -574,19 +574,25 @@ END
 
 IF ~~ D.1 
 SAY @196
-IF ~~ DO ~IncrementGlobal("X3HelgaDurlag","GLOBAL",2)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)IncrementGlobal("X3HelgaDurlag","GLOBAL",2)~ EXIT 
 END
 
 IF ~~ D.2
-SAY @196
+SAY @331
 IF ~~ DO ~IncrementGlobal("X3HelgaDurlag","GLOBAL",2)~ EXIT 
 END
 
 IF ~~ D.3
 SAY @197
-IF ~~ DO ~IncrementGlobal("X3HelgaDurlag","GLOBAL",2)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)IncrementGlobal("X3HelgaDurlag","GLOBAL",2)~ EXIT 
 END
 
+IF ~Global("X3EnterOgreLand","GLOBAL",1)~ InOgreArea
+SAY @304
+= @305
+IF ~~ DO ~SetGlobal("X3EnterOgreLand","GLOBAL",2)~
+EXIT 
+END 
 // GENDER CHANGE, Make sure this is below talks. 
 
 IF ~Global("X3HelgaSexChange","GLOBAL",1)~ EGender
@@ -667,13 +673,15 @@ SAY  @200
 +~Global("Chapter","GLOBAL",7)~+ @212 + Helga.PC7Advice // @212
 // Companion Thoughts 
 +~NumInPartyAliveGT(2)~+ @213 + Helga.PCompanionThoughts // @213 
-+~ReputationGT(Player1,5)~+ @214 + Em.Me1 // @214
++~ReputationGT(Player1,5)GlobalLT("X3HelgaApp","GLOBAL",15)~+ @214 + Em.Me1 // @214
 +~ReputationLT(Player1,6)~+ @214 + Em.Me2 // @214
++~ReputationGT(Player1,6)GlobalLT("X3HelgaApp","GLOBAL",45)GlobalGT("X3HelgaApp","GLOBAL",14)~+ @214 + Em.Me3 // @214
++~ReputationGT(Player1,6)GlobalGT("X3HelgaApp","GLOBAL",44)~+ @214 + Em.Me4 // @214
 // Dialogue From Talk Expansions. These fire once. 
 +~Global("X3HelgaOgreTopic","GLOBAL",0)~+ @215 DO ~SetGlobal("X3HelgaOgreTopic","GLOBAL",1)~  + Helga.PT1Ogre  // @215
 +~GlobalGT("X3HelgaTalk","GLOBAL",4)Global("X3HelgaHaelaTopic","GLOBAL",0)~+ @216 DO ~SetGlobal("X3HelgaHaelaTopic","GLOBAL",1)~ + Helga.PT2Haela 
 +~GlobalGT("X3HelgaTalk","GLOBAL",6)Global("X3HelgaHusbandTopic","GLOBAL",0)~+ @217 DO ~SetGlobal("X3HelgaHusbandTopic","GLOBAL",1)~ + Helga.PT3Husband
-++ @218 EXIT 
+++ @218 + FixString
 ++ @219 EXIT 
 END 
 
@@ -734,6 +742,16 @@ SAY @230
 IF ~~ EXIT 
 END 
 
+IF ~~ Em.Me3 
+SAY @325
+IF ~~ EXIT 
+END 
+
+IF ~~ Em.Me4 
+SAY @326
+IF ~~ EXIT 
+END 
+
 IF ~~ Helga.PT1Ogre
 SAY @231
 = @232
@@ -750,7 +768,7 @@ END
 IF ~~ Helga.PT2Haela
 SAY @237
 = @238
-++ @239 + PT2Thanks 
+++ @239 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + PT2Thanks 
 ++ @240 + PT2Berserk
 +~OR(3)Class(Player1,CLERIC_ALL)InParty("Branwen")CheckStatGT(Player1,50,LORE)~+ @241 + PT2Tempus
 END 
@@ -785,9 +803,9 @@ END
 IF ~~ Helga.PT3Husband 
 SAY @248
 = @249
-++ @250 + Helga.PT3Loss 
+++ @250 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ + Helga.PT3Loss 
 ++ @251 + Helga.PT3Kill 
-++ @252 + Helga.PT3New 
+++ @252 DO ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~ + Helga.PT3New 
 END 
 
 IF ~~ Helga.PT3Loss 
@@ -938,8 +956,169 @@ I_C_T KIVAN 7 X3HelgaKIVAN7
 == X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @294
 END
 
+I_C_T OGRMA3 0 X3HelgaOGRMA3
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @328
+END
+
+I_C_T OGRMA2 0 X3HelgaOGRMA2
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @329
+END
+
+I_C_T OGRMBA 0 X3HelgaOGRMBA0
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @330
+END
+
 INTERJECT OGRECO 0 X3HelgaOGRECO0 
 == X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @295
 == OGRECO @296
 DO ~Enemy()~
 EXIT 
+
+I_C_T NESSIE 2 X3HelgaNESSIE 
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @295
+END 
+
+I_C_T FLAM5 1 X3HelgaFlam51
+== X3HelgaJ IF ~InParty("X3Helga") !InParty("X3Isaac") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @298
+DO ~SetGlobal("X3HelgaAppChange","GLOBAL",4)~ 
+== FLAM5 @299
+END 
+
+I_C_T KEVIN 0 X3HelgaKevin0
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @327
+END 
+
+I_C_T ZARGAL 0 X3HelgaZARGAL0
+== X3HelgaJ IF ~InParty("X3Helga") !InParty("X3Isaac") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @299
+END 
+
+I_C_T ZARGAL 3 X3HelgaZargal3
+== X3HelgaJ IF ~InParty("X3Helga") !InParty("X3Isaac") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @300
+== ZARGAL @302
+END 
+
+I_C_T HICK 0 X3HelgaHICK0
+== X3HelgaJ IF ~InParty("X3Helga") !InParty("X3Isaac") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @303
+END 
+
+I_C_T LAUREL 1 X3HelgaLaurel1 
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @306
+END 
+
+I_C_T LAUREL 2 X3HelgaLaurel2 
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @306
+END 
+
+I_C_T JARED 0 X3HelgaJared0
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @307
+END 
+
+I_C_T GNARL 1 X3HelgaGnarl1
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @307
+END 
+
+I_C_T NOOBER 4 X3HelgaNoober4
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @310
+END 
+
+I_C_T KORAX 3 X3HelgaKorax3
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @311 
+DO ~SetGlobal("X3HelgaAppChange","GLOBAL",2)~
+== KORAX @312
+END 
+
+I_C_T RSCOMN01 4 X3HelgaRSCOMN01
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @307
+DO ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~ 
+END 
+
+I_C_T KIRIAN 3 X3HelgaKirian3
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @313
+END 
+
+I_C_T SENDAI 0 X3HelgaSendai0
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @314
+END 
+
+I_C_T GNOLL5 0 X3HelgaGNOLL5
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @315
+END 
+
+I_C_T DRIZZT 9 X3HelgaDRIZZt
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @316
+END
+
+I_C_T GAZIB 0 X3HelgaGAZIB
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @317
+END 
+
+I_C_T SARHED 2 X3HelgaSARHED
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @318
+END
+
+I_C_T CANTO 0 X3HelgaCanto
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @319
+END
+
+I_C_T MENDA4 4 X3HelgaMenda4
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @324
+END
+
+I_C_T KIRINHAL 10 X3HelgaKIRINAHL
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @320
+DO ~SetGlobal("X3HelgaAppChange","GLOBAL",3)~
+== KIRINHAL @321
+END 
+
+I_C_T CORAN 4 X3HelgaCoran4
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @322
+END
+
+I_C_T CENTEO 2 X3HelgaCenteo2
+== X3HelgaJ IF ~InParty("X3Helga") InMyArea("X3Helga") !StateCheck("X3Helga",CD_STATE_NOTVALID)~ THEN @323
+END
+
+ADD_TRANS_ACTION CANTO BEGIN 2 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",3)~
+
+ADD_TRANS_ACTION CORAN BEGIN 5 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~
+
+ADD_TRANS_ACTION GNOLL5 BEGIN 1 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",7)~
+
+ADD_TRANS_ACTION SENDAI BEGIN 2 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~
+
+ADD_TRANS_ACTION KIRIAN BEGIN 5 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",9)~
+
+ADD_TRANS_ACTION LAUREL BEGIN 3 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~
+
+ADD_TRANS_ACTION GNARL BEGIN 3 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",5)~
+
+ADD_TRANS_ACTION HAIRTO BEGIN 2 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",4)~
+
+ADD_TRANS_ACTION LAUREL BEGIN 3 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~
+
+ADD_TRANS_ACTION HICK BEGIN 1 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",4)~
+ADD_TRANS_ACTION HICK BEGIN 2 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~
+
+ADD_TRANS_ACTION ZARGAL BEGIN 1 END BEGIN END ~SetGlobal("X3HelgaAppChange","GLOBAL",8)~
+
+
+ALTER_TRANS FLAM5 // file name
+BEGIN 3 END // state number (can be more than one)
+BEGIN 1 END // transition number (can be more than one)
+BEGIN // list of changes, see below for flags
+  "ACTION" ~SetGlobal("X3HelgaAppChange","GLOBAL",8)ActionOverride("flam5a",Enemy())
+ActionOverride("flam5b",Enemy())
+Enemy()
+~
+END
+
+
+ALTER_TRANS FLAM5 // file name
+BEGIN 0 END // state number (can be more than one)
+BEGIN 1 END // transition number (can be more than one)
+BEGIN // list of changes, see below for flags
+  "ACTION" ~SetGlobal("X3HelgaAppChange","GLOBAL",8)ActionOverride("flam5a",Enemy())
+ActionOverride("flam5b",Enemy())
+Enemy()
+~
+END

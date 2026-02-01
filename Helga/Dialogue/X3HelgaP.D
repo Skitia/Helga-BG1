@@ -24,7 +24,7 @@ END
 
 IF ~Global("X3HelgaKickedOut","GLOBAL",1)!Global("X3HelgaQuestTimerDone","GLOBAL",1)~ kicked2
 SAY @8
-+~Dead("X3HogreL")Global("X3HelgaQuest","GLOBAL",0)~+ @6 DO ~AddJournalEntry(@1003,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",1)~  + b2.kill 
++~Dead("X3HogreL")Global("X3HelgaQuest","GLOBAL",0)~+ @6 DO ~AddJournalEntry(@1003,QUEST_DONE)AddexperienceParty(600)SetGlobal("X3HelgaQuest","GLOBAL",1)IncrementGlobal("X3HelgaAppChange","GLOBAL",9)~  + b2.kill 
 +~OR(2)!Dead("X3HogreL")!Global("X3HelgaQuest","GLOBAL",0)~+ @9 + b3.1
 +~OR(2)!Dead("X3HogreL")!Global("X3HelgaQuest","GLOBAL",0)~+ @10 + b3.2
 END 

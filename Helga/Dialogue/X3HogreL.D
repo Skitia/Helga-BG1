@@ -2,7 +2,7 @@ BEGIN X3HogreL
 
 CHAIN IF ~Global("X3HogreLTalk","GLOBAL",0)IsValidForPartyDialogue("X3Helga")~ THEN X3HogreL Talk1
 @0
-DO ~SetGlobal("X3HogreLTalk","GLOBAL",1)~
+DO ~SetGlobal("X3HogreLTalk","GLOBAL",1)SetGlobal("X3HelgaAppChange","GLOBAL",6)~
 END
 +~!TimeOfDay(Night)~+ @1 + Talk1N
 ++ @2 EXTERN X3HelgaJ Talk12
@@ -69,13 +69,15 @@ END
 
 CHAIN X3HelgaJ BackDownHighC
 @26
+DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-2)~
 EXTERN X3HogreL Talk1BegB 
 
 CHAIN X3HelgaJ BackDownLowC 
 @27
+DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",-2)~
 END 
 ++ @28 EXTERN X3HogreL Fight2
-++ @29 EXTERN X3HogreL Talk1Fight 
+++ @29 DO ~IncrementGlobal("X3HelgaAppChange","GLOBAL",2)~ EXTERN X3HogreL Talk1Fight 
 
 CHAIN X3HogreL Fight2 
 @30

@@ -1,6 +1,6 @@
 BACKUP ~Helga\backup~
 AUTHOR ~Skitia~
-VERSION ~1.57~
+VERSION @0
 
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/Lib/qd_multiclass.tpa~

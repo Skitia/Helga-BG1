@@ -14,6 +14,11 @@ LANGUAGE
   ~english~
   ~%MOD_FOLDER%/Tra/English/Setup-Helga.tra~
 
+LANGUAGE 
+  ~Schinese~ 
+  ~schinese~
+  ~%MOD_FOLDER%/Tra/schinese/Setup-Helga.tra~
+
 BEGIN @1 
 
 ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
@@ -247,8 +252,8 @@ APPEND ~interdia.2da~ ~X3Helga X3HelgaB~
   
 /// Journal /// 
   
-ADD_JOURNAL TITLE (@1000) @1001 @1002 @1003 @1004 USING ~Helga/Tra/English/setup-Helga.tra~
-ADD_JOURNAL TITLE (@1010) @1011 USING ~Helga/Tra/English/setup-Helga.tra~
+ADD_JOURNAL TITLE (@1000) @1001 @1002 @1003 @1004 USING ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup-Helga.tra~
+ADD_JOURNAL TITLE (@1010) @1011 USING ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup-Helga.tra~
 
 
 /// Dialogue 
